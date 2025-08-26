@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="exerinity">
+    <title>exerinity dot dev</title>
+    <link rel="stylesheet" href="/i/files/css/structure.css">
+    <link rel="stylesheet" href="/i/files/css/misc.css">
+    <link rel="stylesheet" href="/i/files/css/interactives.css">
+    <link rel="canonical" href="https://exerinity.dev">
+    <meta name="theme-color" content="#4a29c2">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- twemoji -->
+    <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="exerinity">
+    <meta name="twitter:description" content="I like coding stuff.">
+    <meta name="twitter:image" content="/i/files/media/av.png">
+
+    <!-- og -->
+    <meta property="og:title" content="exerinity">
+    <meta property="og:description" content="I like coding stuff.">
+    <meta property="og:image" content="/i/files/media/av.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://exerinity.dev">
+
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://i.exerinity.com" crossorigin>
+    <link rel="preconnect" href="https://bsky.app" crossorigin>
+    <link rel="preconnect" href="https://api.lanyard.rest" crossorigin>
+
+    <!-- icons -->
+    <link rel="icon" type="image/png" href="/i/files/media/av.png">
+    <link rel="apple-touch-icon" href="/i/files/media/av.png">
+
+    <!-- turbolinks -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js"></script>
+    <script>Turbolinks.start();</script> <!-- kick it into turbo -->
+</head>
+
+<body>
+    <script src="/i/files/js/stars.js" defer></script>
+    <script src="/i/files/js/clock.js" defer></script>
+    <script src="/i/files/js/discord.js" defer></script>
+    <script src="/i/files/js/bsky.js" defer></script>
+    <script src="/i/files/js/songs.js" defer></script>
+    <script src="/i/files/js/main.js" defer></script>
+    <canvas id="bgstars"></canvas>
+    <main>
+        <section id="about">
+            <small class="site-brand" style="font-size: 0.75rem; opacity: 0.8; user-select: none; cursor: pointer;" id="exedev" title="click me!">exerinity.dev
+            </small>
+            <h1 id="welcome" class="welcome" title="Welcomeeeeeeeeeeee">Welcome 👋</h1>
+            <p>Hey! I'm exerinity - a self-taught programmer, FLAC enthusiast, BeamNG.drive dilettante, and most importantly; an annoying creature from Australia. I mostly make random media-related stuff, in JavaScript since I was like 9.</p>
+            <p>Outside of coding, I play too many games - BeamNG.drive mostly. My favourite car in it is the Bruckell Bastion. 5.7 Luxe AWD.</p>
+            <p>I also listen to a ton of music, mostly EDM - Daft Punk, deadmau5, Avicii and Martin Garrix.</p>
+            <p>This site was started on August 26 2025. I did a 5 hour programming marathon to make it, while reusing a lot of my other code. Efficiencee™</p>
+            <hr>
+            <div id="presence">
+                <p id="line">Currently <span id="status" class="offline">...</span>
+                    <i class="fa-brands fa-discord"></i>
+                </p>
+                <p id="activity" class="sub hidden"></p>
+                <p id="playing" class="sub hidden"></p>
+            </div>
+        </section>
+        <section id="projects">
+            <h1>Projects <i class="fa-solid fa-code"></i></h1>
+            <ul>
+                <li title="A multifunctional bot"><a href="https://ex3.icu"><i
+                            class="fa-solid fa-brands fa-discord"></i> ex3</a></li>
+                <li title="A simple chatbot"><a href="https://pigeon.exerinity.com"><i
+                            class="fa-solid fa-brands fa-discord"></i><i class="fa-solid fa-robot"></i> pigeon</a></li>
+                <li title="A feature-rich local music file player that works as a PWA"><a
+                        href="https://audion.exerinity.com"><i class="fa-solid fa-tower-broadcast fa-beat"
+                            style="color: #8000ff;"></i> Audion</a></li>
+                <li><a href="https://exerinity.com/projects">...more</a></li>
+
+            </ul>
+        </section>
+        <section id="clocks">
+            <h1>Time for... <i class="fa-solid fa-clock"></i></h1>
+            <div class="clocks">
+                <div class="clock-item" title="UTC, GMT 0">
+                    <i class="fa-solid fa-globe"></i> UTC
+                    <span id="clock-utc" aria-live="polite"></span>
+                </div>
+                <div class="clock-item" title="Your device">
+                    <i class="fa-solid fa-user-clock"></i> You
+                    <span id="clock-local" aria-live="polite"></span>
+                </div>
+                <div class="clock-item" title="My time, UTC+10, or AEST">
+                    <i class="fa-solid fa-crown"></i> Me
+                    <span id="clock-utc10" aria-live="polite"></span>
+                </div>
+            </div>
+        </section>
+        <section id="bsky">
+            <h1>Bluesky <i class="fa-brands fa-bluesky"></i></h1>
+            <div id="bsky-profile"></div>
+            <div id="bsky-post"></div>
+        </section>
+        <section id="random-song">
+            <audio id="anotherone" preload="auto" src="/i/files/media/another_one.ogg"></audio>
+            <h1><a class="secrethyperlink" href="https://open.spotify.com/playlist/0ddWhrmtzPgUUMSoQvDLd0"><i class="fa-brands fa-spotify"></i> Random song</a></h1>
+            <div class="song-controls" style="margin: .5rem 0 1rem;">
+                <button id="song-shuffle" type="button">
+                    <i class="fa-solid fa-shuffle"></i> Give me another one!
+                </button>
+            </div>
+            <div id="spotify-embed" class="spotify-embed"></div>
+        </section>
+        <section id="about">
+            <p>This site is in early development. I spent five hours on this non-stop - but I will progressively add
+                more.</p>
+            <div class="nav-links">
+                <a href="https://exerinity.com"><i class="fa-solid fa-house"></i> exerinity.com</a>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
