@@ -47,11 +47,25 @@
     const pl = em.playlist;
     const th = em.thumbnail;
     if (!pl) return '';
+    const videoId = `video-${Math.random().toString(36).substr(2, 9)}`;
+    
+    setTimeout(() => {
+      const video = document.getElementById(videoId);
+      if (!video) return;
+      
+      if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = pl;
+      } else if (window.Hls && window.Hls.isSupported()) {
+        const hls = new window.Hls();
+        hls.loadSource(pl);
+        hls.attachMedia(video);
+      } else {
+        video.innerHTML = `<p><i class="fa-solid fa-arrow-up-right-from-square"></i> Your browser may not support HLS playback - <a href="${pl}" target="_blank" rel="noopener noreferrer">open video on Bluesky</a>?</p>`;
+      }
+    }, 0);
+    
     return `<div class="bsky-video">
-      <video controls preload="metadata" ${th ? `poster="${th}"` : ''}>
-        <source src="${pl}" type="application/x-mpegURL" />
-        <i class="fa-solid fa-arrow-up-right-from-square"></i> Your browser may not support HLS playback - <a href="${pl}" target="_blank" rel="noopener noreferrer">open video</a>?
-      </video>
+      <video id="${videoId}" controls preload="metadata" ${th ? `poster="${th}"` : ''}></video>
     </div>`;
   }
 
