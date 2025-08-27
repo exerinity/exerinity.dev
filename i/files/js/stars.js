@@ -51,7 +51,22 @@ function create() {
     meteors.push({ x: startX, y: startY, angle, speed, length, alpha: 1 });
 }
 
-setInterval(create, Math.random() * 7000 + 3000);
+let inter = null;
+function cron() {
+    const delay = Math.random() * 7000 + 3000;
+    inter = setTimeout(() => {
+        create();
+        cron();
+    }, delay);
+}
+function cls() {
+    if (inter !== null) {
+        clearTimeout(inter);
+        inter = null;
+    }
+}
+
+cron();
 
 function met() {
     for (let i = 0; i < meteors.length; i++) {
@@ -93,6 +108,24 @@ function shoot(count = 10) {
 window.shoot = shoot;
 
 let rafId = null;
+
+// Helpers to pause/resume both animation and meteor scheduling
+function pause() {
+    if (rafId !== null) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+    }
+    cls();
+}
+function resume() {
+    if (rafId === null) {
+        rafId = requestAnimationFrame(loop);
+    }
+    if (inter === null) {
+        cron();
+    }
+}
+
 function loop() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     draw();
@@ -102,15 +135,15 @@ function loop() {
 
 loop();
 
+// Pause when tab is hidden; resume when visible
 document.addEventListener('visibilitychange', function () {
     if (document.hidden) {
-        if (rafId !== null) {
-            cancelAnimationFrame(rafId);
-            rafId = null;
-        }
+        pause();
     } else {
-        if (rafId === null) {
-            rafId = requestAnimationFrame(loop);
-        }
+        resume();
     }
 });
+
+// Also pause when window loses focus and resume on focus
+window.addEventListener('blur', pause);
+window.addEventListener('focus', resume);

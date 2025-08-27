@@ -11,25 +11,25 @@ twittermoji();
 function welcome() {
 
     let welcomes = [
-        { text: "Welcome", lang: "English" },
-        { text: "Willkommen", lang: "German" },
-        { text: "Bienvenue", lang: "French" },
-        { text: "Benvenuto", lang: "Italian" },
-        { text: "欢迎", lang: "Chinese" },
-        { text: "ようこそ", lang: "Japanese" },
-        { text: "환영합니다", lang: "Korean" },
-        { text: "Hola", lang: "Spanish" },
-        { text: "Hej", lang: "Swedish" },
-        { text: "Ciao", lang: "Italian" },
-        { text: "Hallo", lang: "German" },
-        { text: "G'day", lang: "Aussie" },
-        { text: "Bem-vindo", lang: "Portuguese" },
-        { text: "Добро пожаловать", lang: "Russian" },
-        { text: "Selamat datang", lang: "Indonesian" },
-        { text: "Welkom", lang: "Afrikaans" },
-        { text: "Välkommen", lang: "Swedish" },
-        { text: "Καλώς ήρθατε", lang: "Greek" },
-    ];
+    { text: "welcome to exerinity.dev", lang: "English" },
+    { text: "willkommen auf exerinity.dev", lang: "German" },
+    { text: "bienvenue sur exerinity.dev", lang: "French" },
+    { text: "ciao! benvenuto su exerinity.dev", lang: "Italian" },
+    { text: "欢迎来到 exerinity.dev", lang: "Chinese (Simplified)" },
+    { text: "ようこそ、exerinity.dev へ", lang: "Japanese" },
+    { text: "exerinity.dev 에 오신 것을 환영합니다", lang: "Korean" },
+    { text: "bienvenido a exerinity.dev", lang: "Spanish" },
+    { text: "välkommen till exerinity.dev", lang: "Swedish" },
+    { text: "g'day! welcome to exerinity.dev", lang: "Aussie" }, // im australian but never say 'gday' haha
+    { text: "bem-vindo ao exerinity.dev", lang: "Portuguese" },
+    { text: "добро пожаловать на exerinity.dev", lang: "Russian" },
+    { text: "selamat datang di exerinity.dev", lang: "Indonesian" },
+    { text: "welkom bij exerinity.dev", lang: "Afrikaans" },
+    { text: "καλώς ήρθατε στο exerinity.dev", lang: "Greek" },
+    { text: "01110111 01100101 01101100 01100011 01101111 01101101 01100101 00100000 01110100 01101111 00100000 01100101 01111000 01100101 01110010 01101001 01101110 01101001 01110100 01111001 00101110 01100100 01100101 01110110", lang: "Binary" },
+    { text: ".-- . .-.. -.-. --- -- . / - --- / . -..- . .-. .. -. .. - - -.-- .-.-.- -.. . ...- ", lang: "Morse" },
+];
+
 
     let chosen = welcomes[Math.floor(Math.random() * welcomes.length)];
     let el = document.getElementById("welcome");
