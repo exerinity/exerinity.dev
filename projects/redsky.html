@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="exerinity">
+    <title>redsky / projects / exerinity dot dev</title>
+    <link rel="stylesheet" href="/i/files/css/structure.css">
+    <link rel="stylesheet" href="/i/files/css/misc.css">
+    <link rel="stylesheet" href="/i/files/css/interactives.css">
+    <link rel="canonical" href="https://exerinity.dev">
+    <meta name="theme-color" content="#4a29c2">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- twemoji -->
+    <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="exerinity">
+    <meta name="twitter:description" content="I like coding stuff.">
+    <meta name="twitter:image" content="/i/files/media/av.png">
+
+    <!-- og -->
+    <meta property="og:title" content="exerinity">
+    <meta property="og:description" content="I like coding stuff.">
+    <meta property="og:image" content="/i/files/media/av.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://exerinity.dev">
+
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://i.exerinity.com" crossorigin>
+    <link rel="preconnect" href="https://bsky.app" crossorigin>
+    <link rel="preconnect" href="https://api.lanyard.rest" crossorigin>
+
+    <!-- icons -->
+    <link rel="icon" type="image/png" href="/i/files/media/av.png">
+    <link rel="apple-touch-icon" href="/i/files/media/av.png">
+</head>
+
+<body>
+    <script src="/i/files/js/stars.js" defer></script>
+    <script src="/i/files/js/clock.js" defer></script>
+    <script src="/i/files/js/discord.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="/i/files/js/bsky.js" defer></script>
+    <script src="/i/files/js/songs.js" defer></script>
+    <script src="/i/files/js/main.js" defer></script>
+    <canvas id="bgstars"></canvas>
+    <main>
+        <section id="about">
+            <small class="site-brand" style="font-size: 0.75rem; opacity: 0.8; user-select: none; cursor: pointer;"
+                id="exedev">exerinity.dev</small> / <small class="site-brand"
+                style="font-size: 0.75rem; opacity: 0.8; user-select: none; cursor: pointer;"
+                id="projecthead">projects</small> / <small class="site-brand"
+                style="font-size: 0.75rem; opacity: 0.8; user-select: none; cursor: pointer;">redsky</small>
+        </section>
+
+        <section id="projects">
+            <h1>redsky</h1>
+            <p><strong>redsky</strong> is a simple viewer for Bluesky that requires no JavaScript, inspired by invidious and nitter.</p>
+                <img src="https://i.exerinity.com/qWqr7N3Ysj.png" style="max-width:100%;height:auto;">
+                <img src="https://i.exerinity.com/PyaXzruSOo.png" style="max-width:100%;height:auto;">
+        </section>
+        <section id="about">
+            <h2>features</h2>
+            <ul style="list-style: disc; margin-left: 20px;">
+                <li><i>extremely</i> lightweight, you are given no scripts at all</li>
+                <li>works great on anything that can browse the web (maybe)</li>
+                <li>good for utmost simplicity, possibly circumventing censorship, scraping, or just for fun</li>
+            </ul>
+
+            <h2>why?</h2>
+            <p>the bluesky web app will not load at all unless you havee javascript enabled. this isn't a problem for most people, but if you want to use bluesky on a device that does not support javascript, or just like simple things, you might like redsky.</p>
+            <div class="nav-links">
+                <a href="https://redsky.exerinity.com" target="_blank" rel="noopener">check it out!</a>
+            </div>
+        </section>
+        <hr>
+        <div class="nav-links">
+            <a href="/"><i class="fa-solid fa-house"></i> home</a>
+            <a href="/projects"><i class="fa-solid fa-code"></i> back</a>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('exedev').addEventListener('click', () => {
+            window.location.href = '/';
+        });
+        document.getElementById('projecthead').addEventListener('click', () => {
+            window.location.href = '/projects';
+        });
+    </script>
+</body>
+
+</html>

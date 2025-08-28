@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="exerinity">
+    <title>ex3 / projects / exerinity dot dev</title>
+    <link rel="stylesheet" href="/i/files/css/structure.css">
+    <link rel="stylesheet" href="/i/files/css/misc.css">
+    <link rel="stylesheet" href="/i/files/css/interactives.css">
+    <link rel="canonical" href="https://exerinity.dev">
+    <meta name="theme-color" content="#4a29c2">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- twemoji -->
+    <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="exerinity">
+    <meta name="twitter:description" content="I like coding stuff.">
+    <meta name="twitter:image" content="/i/files/media/av.png">
+
+    <!-- og -->
+    <meta property="og:title" content="exerinity">
+    <meta property="og:description" content="I like coding stuff.">
+    <meta property="og:image" content="/i/files/media/av.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://exerinity.dev">
+
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://i.exerinity.com" crossorigin>
+    <link rel="preconnect" href="https://bsky.app" crossorigin>
+    <link rel="preconnect" href="https://api.lanyard.rest" crossorigin>
+
+    <!-- icons -->
+    <link rel="icon" type="image/png" href="/i/files/media/av.png">
+    <link rel="apple-touch-icon" href="/i/files/media/av.png">
+</head>
+
+<body>
+    <script src="/i/files/js/stars.js" defer></script>
+    <script src="/i/files/js/clock.js" defer></script>
+    <script src="/i/files/js/discord.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="/i/files/js/bsky.js" defer></script>
+    <script src="/i/files/js/songs.js" defer></script>
+    <script src="/i/files/js/main.js" defer></script>
+    <canvas id="bgstars"></canvas>
+    <main>
+        <section id="about">
+            <small class="site-brand" style="font-size: 0.75rem; opacity: 0.8; user-select: none; cursor: pointer;"
+                id="exedev">exerinity.dev</small> / <small class="site-brand"
+                style="font-size: 0.75rem; opacity: 0.8; user-select: none; cursor: pointer;"
+                id="projecthead">projects</small> / <small class="site-brand"
+                style="font-size: 0.75rem; opacity: 0.8; user-select: none; cursor: pointer;">ex3</small>
+        </section>
+
+        <section id="projects">
+            <h1>ex3</h1>
+            <p><strong>ex3</strong> is an experimental discord bot with 70+ random commands. it's quite versatile, and
+                has just the right mix of usefulness and uselessness.</p>
+                <img src="https://i.exerinity.com/DakonEMnTL.png" style="max-width:100%;height:auto;"><br>
+                <img src="https://i.exerinity.com/MQqU8kBeAH.png" style="max-width:100%;height:auto;"><br>
+                <img src="https://i.exerinity.com/CLGL1DrZRJ.png" style="max-width:100%;height:auto;">
+        </section>
+        <section id="about">
+            <h2>features</h2>
+            <ul style="list-style: disc; margin-left: 20px;">
+                <li>slash commands are colour-coded by category</li>
+                <li>roast your friends music taste with AI, calculate this, calculate that, get a dadjoke, scour the web, and more</li>
+                <li>works in DMs, group chats, and servers its not actually in (Your Apps) <abbr title="obviously guild info commands wont work">[but not every command works]</abbr>
+                <li>some humorous responses / commands</li>
+                <li><a href="https://ex3.icu" target="_blank" rel="noopener">a website</a></li>
+                <li>simple by design</li>
+            </ul>
+
+            <h2>why?</h2>
+            <p><a href="https://ex3.icu/i/faq" target="_blank" rel="noopener">https://ex3.icu/i/faq</a></p>
+            <div class="nav-links">
+                <a href="https://ex3.icu" target="_blank" rel="noopener">check it out!</a>
+                <a href="/invite/ex3" target="_blank" rel="noopener">invite</a>
+            </div>
+        </section>
+        <hr>
+        <div class="nav-links">
+            <a href="/"><i class="fa-solid fa-house"></i> home</a>
+            <a href="/projects"><i class="fa-solid fa-code"></i> back</a>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('exedev').addEventListener('click', () => {
+            window.location.href = '/';
+        });
+        document.getElementById('projecthead').addEventListener('click', () => {
+            window.location.href = '/projects';
+        });
+    </script>
+</body>
+
+</html>

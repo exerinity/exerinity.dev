@@ -421,3 +421,7 @@ ul {
 
     #presence .dc-avatar { width: 48px; height: 48px; }
 }
+
+a, a:visited {
+    color: #fff;
+}

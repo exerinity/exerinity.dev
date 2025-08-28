@@ -86,3 +86,10 @@ hr {
     display: inline-block;
     vertical-align: middle;
 }
+
+blockquote {
+    border-left: 4px solid rgba(255, 255, 255, 0.12);
+    margin: 16px 0;
+    padding-left: 16px;
+    color: #ccc;
+}

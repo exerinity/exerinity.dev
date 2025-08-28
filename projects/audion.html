@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="exerinity">
+    <title>Audion / projects / exerinity dot dev</title>
+    <link rel="stylesheet" href="/i/files/css/structure.css">
+    <link rel="stylesheet" href="/i/files/css/misc.css">
+    <link rel="stylesheet" href="/i/files/css/interactives.css">
+    <link rel="canonical" href="https://exerinity.dev">
+    <meta name="theme-color" content="#4a29c2">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- twemoji -->
+    <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="exerinity">
+    <meta name="twitter:description" content="I like coding stuff.">
+    <meta name="twitter:image" content="/i/files/media/av.png">
+
+    <!-- og -->
+    <meta property="og:title" content="exerinity">
+    <meta property="og:description" content="I like coding stuff.">
+    <meta property="og:image" content="/i/files/media/av.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://exerinity.dev">
+
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://i.exerinity.com" crossorigin>
+    <link rel="preconnect" href="https://bsky.app" crossorigin>
+    <link rel="preconnect" href="https://api.lanyard.rest" crossorigin>
+
+    <!-- icons -->
+    <link rel="icon" type="image/png" href="/i/files/media/av.png">
+    <link rel="apple-touch-icon" href="/i/files/media/av.png">
+</head>
+
+<body>
+    <script src="/i/files/js/stars.js" defer></script>
+    <script src="/i/files/js/clock.js" defer></script>
+    <script src="/i/files/js/discord.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="/i/files/js/bsky.js" defer></script>
+    <script src="/i/files/js/songs.js" defer></script>
+    <script src="/i/files/js/main.js" defer></script>
+    <canvas id="bgstars"></canvas>
+    <main>
+        <section id="about">
+            <small class="site-brand" style="font-size: 0.75rem; opacity: 0.8; user-select: none; cursor: pointer;"
+                id="exedev">exerinity.dev</small> / <small class="site-brand"
+                style="font-size: 0.75rem; opacity: 0.8; user-select: none; cursor: pointer;"
+                id="projecthead">projects</small> / <small class="site-brand"
+                style="font-size: 0.75rem; opacity: 0.8; user-select: none; cursor: pointer;">audion</small>
+        </section>
+
+        <section id="projects">
+            <h1>audion</h1>
+            <p><abbr title="Audio on">audion</abbr> is a <abbr title="Progressive Web App">PWA</abbr> local music file
+                player. Its premise is simple: select your file... and... that's it. It has a few cool things, like
+                timed lyrics, visualizers, metadata, and a lot of clickable things. What you see is pretty simple, but
+                under the hood, it's quite advanced, considering I made it myself just for putting &lt;audio&gt; on
+                steroids.</p>
+            <img src="https://i.exerinity.com/nfN7D2rmUa.gif" style="max-width:100%;height:auto;" alt="Audion demo">
+        </section>
+        <section id="about">
+            <h2>features</h2>
+            <ul style="list-style: disc; margin-left: 20px;">
+                <li>lightweight, has no bulky frameworks like React/Vue/Angular</li>
+                <li>local file playback (no uploads)</li>
+                <li>supports: whatever your browser does</li>
+                <li>precise controls: sliders, or dialogues for 100% precision</li>
+                <li>keyboard hotkeys</li>
+                <li>simple by design</li>
+            </ul>
+
+            <h2>why?</h2>
+            <p>i couldn't find a player like this (nor did i really look), and i wanted to consolidate my previous
+                audio-related things into one project i can actually call an "app".</p>
+            <div class="nav-links">
+                <a href="https://audion.exerinity.com" target="_blank" rel="noopener">check it out!</a>
+                <a href="https://github.com/exerinity/audion" target="_blank" rel="noopener">source code</a>
+            </div>
+        </section>
+        <section id="about">
+            <p>now, i want to talk about some random things it has:</p>
+            <ul style="list-style: disc; margin-left: 20px;">
+                <li><strong>metadata copying</strong>: you can click on the status bar, or the title/artist/album to
+                    copy the respective metadata to your clipboard. mainly, i did this so i can quickly strike up a
+                    conversation with ChatGPT about the song</li>
+                <li><strong>draggable popups</strong>: because why not</li>
+                <li><strong>sound effects from Windows</strong>: the XP logon sound plays when you open the app, but you
+                    may never have heard it because browsers block autoplay; and also the XP error sound when an error
+                    occurs</li>
+                <li><strong>"toys"</strong>: lets you push fake errors, status pushes, message boxes</li>
+                <li><strong>an over-engineered status bar</strong>: instead of doing the good old <abbr
+                        title="pushUpdate() setTimeout(revert, 3000)">revert in 3 seconds</abbr>, the amount of status
+                    pushes are counted, and only 3 seconds after the last one will it revert. since the status bar shows
+                    scrubbing, volume, basically everything, this is necessary <a
+                        href="https://i.exerinity.com/2nFINbuQGM">or it will look very messy</a></li>
+                <li><strong>timed lyrics</strong>: if your file has matching metadata to what lrclib has, it will show
+                    timed lyrics, you can even click on a line to jump to it</li>
+                <li><strong>public domain</strong>: i released the code under the unlicense, because this is nonsense
+                </li>
+            </ul>
+            <p>read more on the GitHub readme: <a href="https://github.com/exerinity/audion#readme" target="_blank"
+                    rel="noopener">here</a></p>
+        </section>
+        <hr>
+        <div class="nav-links">
+            <a href="/"><i class="fa-solid fa-house"></i> home</a>
+            <a href="/projects"><i class="fa-solid fa-code"></i> back</a>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('exedev').addEventListener('click', () => {
+            window.location.href = '/';
+        });
+        document.getElementById('projecthead').addEventListener('click', () => {
+            window.location.href = '/projects';
+        });
+    </script>
+</body>
+
+</html>
