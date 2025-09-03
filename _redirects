@@ -6,3 +6,10 @@
 /bluesky https://bsky.app/profile/exerinity.dev
 /socials https://exerinity.com/socials
 /dotcom https://exerinity.com
+/stars /stargaze
+/blog/* https://exerinity.com/blog/:splat
+/ex3 /projects/ex3
+/pigeon /projects/pigeon
+/rs /projects/rss
+/api https://api.exerinity.com
+/twemoji https://twemoji.exerinity.com/index.html
