@@ -1,9 +1,9 @@
 const canvas = document.getElementById('bgstars');
 const ctx = canvas.getContext('2d');
 
-const stars = [];
+console.log('stars loaded, canvas:', canvas, 'ctx:', ctx);
 
-console.log('stars loaded');
+const stars = [];
 
 function initialize() {
     canvas.width = window.innerWidth;
@@ -17,7 +17,7 @@ function initialize() {
             radius: r,
             alpha: Math.random() * 0.5 + 0.5,
             dx: (Math.random() - 0.5) * 0.1,
-            dy: (Math.random() - 0.5) * 0.05 
+            dy: (Math.random() - 0.5) * 0.05
         });
     }
 }
@@ -38,13 +38,13 @@ function draw() {
 
         star.x += star.dx;
         star.y += star.dy;
-        
+
         if (star.x - star.radius > canvas.width) {
             star.x = -star.radius;
         } else if (star.x + star.radius < 0) {
             star.x = canvas.width + star.radius;
         }
-        
+
         if (star.y - star.radius > canvas.height) {
             star.y = -star.radius;
         } else if (star.y + star.radius < 0) {
@@ -59,22 +59,23 @@ function create() {
     const side = Math.random();
     let startX, startY, angle;
     if (side < 0.5) {
-        startX = -20;
-        startY = Math.random() * canvas.height;
-        angle = Math.PI * 3/4 + (Math.random() - 0.5) * (Math.PI / 6);
-    } else {
-        startX = canvas.width + 20;
+        startX = 0;
         startY = Math.random() * canvas.height;
         angle = Math.PI / 4 + (Math.random() - 0.5) * (Math.PI / 6);
+    } else {
+        startX = canvas.width;
+        startY = Math.random() * canvas.height;
+        angle = Math.PI * 3 / 4 + (Math.random() - 0.5) * (Math.PI / 6);
     }
-    const speed = Math.random() * 3 + 3;
-    const length = Math.random() * 20 + 20;
+    const speed = Math.random() * 2 + 1;
+    const length = Math.random() * 40 + 40;
     meteors.push({ x: startX, y: startY, angle, speed, length, alpha: 1 });
+    console.log('meteor created at', startX, startY, 'angle', angle * 180 / Math.PI);
 }
 
 let inter = null;
 function cron() {
-    const delay = Math.random() * 7000 + 3000;
+    const delay = Math.random() * 4000 + 1000;
     inter = setTimeout(() => {
         create();
         cron();
@@ -113,8 +114,10 @@ function met() {
         s.x += s.speed * Math.cos(s.angle);
         s.y += s.speed * Math.sin(s.angle);
 
-        s.alpha -= 0.02;
-        if (s.alpha <= 0 || s.y > canvas.height || s.x > canvas.width || s.x < 0) {
+        s.alpha -= 0.01;
+        if (s.alpha <= 0 || s.y > canvas.height || s.y < 0 ||
+            (s.angle < Math.PI / 2 && s.x > canvas.width + s.length) ||
+            (s.angle >= Math.PI / 2 && s.x < -s.length)) {
             meteors.splice(i, 1);
             i--;
         }
@@ -152,6 +155,7 @@ function loop() {
     draw();
     met();
     rafId = requestAnimationFrame(loop);
+    if (Math.random() < 0.01) console.log('loop running, meteors:', meteors.length);
 }
 
 loop();
