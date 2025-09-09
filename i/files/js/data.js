@@ -275,17 +275,16 @@
 		const pol = $('bsky-post');
 		if (!ppl && !pol) return;
 
-		if (pol) pol.innerHTML = '<p class="loading"><div class="spinner"></div></p>';
-
 		try {
 			if (ppl) ppl.innerHTML = rpr(bs?.profile || {});
 			const item = bs?.feed?.feed?.[0] || null;
 
-			// Check if the current post is the same as the last rendered post
-			if (item && JSON.stringify(item) === JSON.stringify(curr)) {
+			if (item && curr && item.post && curr.post && item.post.uri === curr.post.uri) {
 				console.log('No changes in Bluesky post, skipping render.');
 				return;
 			}
+
+			if (pol) pol.innerHTML = '<p class="loading"><div class="spinner"></div></p>';
 
 			if (pol) {
 				if (item) {
