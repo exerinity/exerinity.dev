@@ -1,5 +1,5 @@
 (() => {
-	const API = 'http://api.exerinity.com/getdata';
+	const API = 'https://api.exerinity.com/getdata';
 
 	const $ = (id) => document.getElementById(id);
 	const esc = (s = '') => s
