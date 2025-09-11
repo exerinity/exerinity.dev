@@ -19,9 +19,6 @@
     avatarDeco: $('dc-avatar-deco'),
         name: $('dc-name'),
     handle: $('dc-handle'),
-    clanBox: $('dc-clan'),
-    clanIcon: $('dc-clan-icon'),
-    clanTag: $('dc-clan-tag'),
     };
 
     const REFRESH_MS = 10000;
@@ -139,30 +136,6 @@
             } else {
                 sh(dizel.avatarDeco, true);
                 dizel.avatarDeco.removeAttribute('src');
-            }
-        }
-
-        // clan tag (primary guild / badge)
-        const primaryGuild = data.primary_guild || null;
-        let clanGuildId = null;
-        let clanBadgeHash = null;
-        let clanTag = null;
-        if (primaryGuild) {
-            clanGuildId = primaryGuild.identity_guild_id || primaryGuild.guild_id || null;
-            clanBadgeHash = primaryGuild.badge || null;
-            clanTag = primaryGuild.tag || null;
-        }
-        if (dizel.clanBox) {
-            if (clanGuildId && clanBadgeHash && clanTag) {
-                const iconUrl = `https://cdn.discordapp.com/clan-badges/${clanGuildId}/${clanBadgeHash}.png?size=4096`;
-                if (dizel.clanIcon) dizel.clanIcon.src = iconUrl;
-                if (dizel.clanIcon) dizel.clanIcon.alt = `${clanTag} badge`;
-                if (dizel.clanTag) dizel.clanTag.textContent = clanTag;
-                sh(dizel.clanBox, false);
-            } else {
-                sh(dizel.clanBox, true);
-                if (dizel.clanIcon) dizel.clanIcon.removeAttribute('src');
-                if (dizel.clanTag) dizel.clanTag.textContent = '';
             }
         }
 
