@@ -151,11 +151,14 @@
             else dizel.avatar.addEventListener('load', () => requestAnimationFrame(tuneAvatarOverlay), { once: true });
         }
 
-        const deco = u.avatar_decoration_data || data.avatar_decoration_data || null;
+    const deco = u.avatar_decoration_data || data.avatar_decoration_data || null;
         const decoAsset = deco?.asset || null;
         if (dizel.avatarDeco) {
             if (decoAsset) {
-                const decoUrl = `https://cdn.discordapp.com/avatar-decoration-presets/${decoAsset}.png?size=4096&passthrough=true`;
+        let reduced = false;
+        try { reduced = localStorage.getItem('reducedMotion') === 'true'; } catch {}
+        const passthrough = reduced ? 'false' : 'true';
+        const decoUrl = `https://cdn.discordapp.com/avatar-decoration-presets/${decoAsset}.png?size=4096&passthrough=${passthrough}`;
                 dizel.avatarDeco.src = decoUrl;
                 sh(dizel.avatarDeco, false);
                 if (dizel.avatarDeco.complete) requestAnimationFrame(tuneAvatarOverlay);

@@ -44,9 +44,7 @@ function welcome() {
     { text: "добро пожаловать на exerinity.dev", lang: "Russian" },
     { text: "selamat datang di exerinity.dev", lang: "Indonesian" },
     { text: "welkom bij exerinity.dev", lang: "Afrikaans" },
-    { text: "καλώς ήρθατε στο exerinity.dev", lang: "Greek" },
-    { text: "01110111 01100101 01101100 01100011 01101111 01101101 01100101 00100000 01110100 01101111 00100000 01100101 01111000 01100101 01110010 01101001 01101110 01101001 01110100 01111001 00101110 01100100 01100101 01110110", lang: "Binary" },
-    { text: ".-- . .-.. -.-. --- -- . / - --- / . -..- . .-. .. -. .. - - -.-- .-.-.- -.. . ...- ", lang: "Morse" },
+    { text: "καλώς ήρθατε στο exerinity.dev", lang: "Greek" }
 ];
 
 
@@ -84,3 +82,5 @@ document.getElementById("exedev").addEventListener("click", () => {
         }, 500);
     }
 });
+
+// settings-related code moved to settings.js

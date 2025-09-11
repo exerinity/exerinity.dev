@@ -1,0 +1,55 @@
+(function () {
+  function getReducedMotion() {
+    try { return localStorage.getItem('reducedMotion') === 'true'; } catch { return false; }
+  }
+  function setReducedMotionPref(val) {
+    try { localStorage.setItem('reducedMotion', val ? 'true' : 'false'); } catch {}
+    if (window.setReducedMotion) window.setReducedMotion(val);
+  }
+
+  function openSettings() {
+    const current = getReducedMotion();
+    const html = `
+        <div style="display:flex; align-items:center; gap:.5rem; font-size:1.05rem; font-weight:600;">
+          <i class="fa-solid fa-gear fa-spin" style="color: var(--accent, #4f90ff);"></i>
+          <span>Settings</span>
+        </div>
+        <label style="display:flex; align-items:center; gap:.5rem; cursor:pointer;">
+            <input id="rm-toggle" type="checkbox" ${current ? 'checked' : ''} />
+            <span>Reduced motion</span>
+        </label>
+        <div style="opacity:.8; font-size:.9rem; margin:.25rem 0 0 1.65rem; text-align:left;">Freeze the star background and simplify avatar decorations.</div>
+    `;
+    try { msg(html, { titlebarText: 'exerinity.dev' }); } catch {}
+    setTimeout(() => {
+      const chk = document.getElementById('rm-toggle');
+      if (chk) {
+        chk.addEventListener('change', () => {
+          setReducedMotionPref(chk.checked);
+          try {
+            const img = document.getElementById('dc-avatar-deco');
+            if (img && img.src) {
+              const url = new URL(img.src);
+              if (url.hostname === 'cdn.discordapp.com') {
+                const params = url.searchParams;
+                if (chk.checked) params.set('passthrough', 'false'); else params.set('passthrough', 'true');
+                url.search = params.toString();
+                img.src = url.toString();
+              }
+            }
+          } catch {}
+        });
+      }
+    }, 0);
+  }
+
+  window.getReducedMotion = getReducedMotion;
+  window.setReducedMotionPref = setReducedMotionPref;
+  window.openSettings = openSettings;
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('settings-btn');
+    if (btn) btn.addEventListener('click', openSettings);
+    if (window.setReducedMotion) window.setReducedMotion(getReducedMotion());
+  });
+})();

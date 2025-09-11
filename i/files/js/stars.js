@@ -170,3 +170,23 @@ document.addEventListener('visibilitychange', function () {
 
 window.addEventListener('blur', pause);
 window.addEventListener('focus', resume);
+
+// Reduced motion integration
+let reducedMotion = false;
+function applyReducedMotion(flag) {
+    reducedMotion = !!flag;
+    if (reducedMotion) {
+        // Freeze: stop loop and meteor cron
+        pause();
+    } else {
+        // Resume animations
+        resume();
+    }
+}
+// Expose setter for other scripts
+window.setReducedMotion = applyReducedMotion;
+// Initialize based on persisted setting if available
+try {
+    const v = localStorage.getItem('reducedMotion');
+    if (v === 'true') applyReducedMotion(true);
+} catch {}
