@@ -28,6 +28,28 @@
     let lastRendered = '';
     let rafId = 0;
     let refreshtime = 0;
+    let dpr = (typeof window !== 'undefined' && window.devicePixelRatio) ? window.devicePixelRatio : 1;
+
+    const tuneAvatarOverlay = () => {
+        try {
+            const av = dizel.avatar;
+            const deco = dizel.avatarDeco;
+            if (!av || !deco) return;
+            const wrap = av.parentElement;
+            if (!wrap) return;
+            const rect = wrap.getBoundingClientRect();
+            const w = Math.round(rect.width);
+            const h = Math.round(rect.height);
+            wrap.style.width = w + 'px';
+            wrap.style.height = h + 'px';
+            av.style.width = w + 'px';
+            av.style.height = h + 'px';
+            deco.style.width = w + 'px';
+            deco.style.height = h + 'px';
+            deco.style.left = '0px';
+            deco.style.top = '0px';
+        } catch { }
+    };
 
     const renderit = () => {
         if (!dizel.status) return;
@@ -124,8 +146,11 @@
         if (dizel.name) dizel.name.innerHTML = name || '<div class="spinner" style="width:1em;height:1em;display:inline-block;vertical-align:middle;"></div>';
         if (dizel.handle) dizel.handle.innerHTML = handle;
         if (dizel.avatar && av) dizel.avatar.src = av;
+        if (dizel.avatar) {
+            if (dizel.avatar.complete) requestAnimationFrame(tuneAvatarOverlay);
+            else dizel.avatar.addEventListener('load', () => requestAnimationFrame(tuneAvatarOverlay), { once: true });
+        }
 
-        // avatar decoration (overlay on top of avatar)
         const deco = u.avatar_decoration_data || data.avatar_decoration_data || null;
         const decoAsset = deco?.asset || null;
         if (dizel.avatarDeco) {
@@ -133,6 +158,8 @@
                 const decoUrl = `https://cdn.discordapp.com/avatar-decoration-presets/${decoAsset}.png?size=4096&passthrough=true`;
                 dizel.avatarDeco.src = decoUrl;
                 sh(dizel.avatarDeco, false);
+                if (dizel.avatarDeco.complete) requestAnimationFrame(tuneAvatarOverlay);
+                else dizel.avatarDeco.addEventListener('load', () => requestAnimationFrame(tuneAvatarOverlay), { once: true });
             } else {
                 sh(dizel.avatarDeco, true);
                 dizel.avatarDeco.removeAttribute('src');
@@ -362,6 +389,15 @@
         const hbs = $('bsky-profile') || $('bsky-post');
         if (!hds && !hbs) return;
         load();
+        requestAnimationFrame(tuneAvatarOverlay);
+        window.addEventListener('resize', () => requestAnimationFrame(tuneAvatarOverlay));
+        setInterval(() => {
+            const ndpr = window.devicePixelRatio || 1;
+            if (ndpr !== dpr) {
+                dpr = ndpr;
+                requestAnimationFrame(tuneAvatarOverlay);
+            }
+        }, 600);
     };
 
     if (document.readyState === 'loading') {
