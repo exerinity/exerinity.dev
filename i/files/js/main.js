@@ -27,8 +27,7 @@ function twittermoji() {
 twittermoji();
 
 function welcome() {
-    console.log('welcoming you <3');
-
+    console.log('choosing welcome message');
     let welcomes = [
     { text: "welcome to exerinity.dev", lang: "English" },
     { text: "willkommen auf exerinity.dev", lang: "German" },
