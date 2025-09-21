@@ -16,7 +16,8 @@
         </div>
         <label style="display:flex; align-items:center; gap:.5rem; cursor:pointer;">
             <input id="rm-toggle" type="checkbox" ${current ? 'checked' : ''} />
-            <span>Reduced motion</span>
+            <p>Reduced motion</p><br>
+            <span><small>Stops the background stars and avatar decorations on the Discord section</small></span>
         </label>
     `;
     try { msg(html, { titlebarText: 'exerinity.dev' }); } catch {}

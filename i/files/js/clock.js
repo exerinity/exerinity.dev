@@ -12,8 +12,8 @@
   ];
 
   const icons = {
-    day: '<i id="tic" class="fa-solid fa-sun" style="color: #FFD43B;"></i>',
-    night: '<i id="tic" class="fa-solid fa-moon"></i>'
+    day: '<i title="Day" id="tic" class="fa-solid fa-sun" style="color: #FFD43B;"></i>',
+    night: '<i title="Night" id="tic" class="fa-solid fa-moon"></i>'
   };
 
   function pad(n) { return n.toString().padStart(2, '0'); }
