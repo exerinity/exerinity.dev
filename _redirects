@@ -1,6 +1,7 @@
 /invite/ex3 https://discord.com/oauth2/authorize?client_id=757780137449226272 
 /invite/pigeon https://pigeon.exerinity.com/i/invite
 /twitter https://twitter.com/exerinity0
+/x https://x.com/exerinity0
 /github https://github.com/exerinity
 /discord https://discord.com/users/972907501127344179
 /bluesky https://bsky.app/profile/exerinity.dev
@@ -10,6 +11,6 @@
 /blog/* https://exerinity.com/blog/:splat
 /ex3 /projects/ex3
 /pigeon /projects/pigeon
-/rs /projects/rss
+/rs /projects/redsky
 /api https://api.exerinity.com
-/twemoji https://twemoji.exerinity.com/index.html
+/i/twemoji /twemoji
