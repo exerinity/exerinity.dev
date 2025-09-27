@@ -53,7 +53,8 @@
     <script src="/i/files/js/settings.js" defer></script>
     <canvas id="bgstars"></canvas>
     <main>
-        <button id="settings-btn" title="Settings" aria-label="Settings" style="position: fixed; top: 10px; right: 10px; z-index: 10000; background: var(--btn-bg, rgba(0,0,0,0.35)); color: var(--fg, #fff); border: none; border-radius: 999px; width: 36px; height: 36px; display: grid; place-items: center; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,0.15); backdrop-filter: blur(6px);">
+        <button id="settings-btn" title="Settings" aria-label="Settings"
+            style="position: fixed; top: 10px; right: 10px; z-index: 10000; background: var(--btn-bg, rgba(0,0,0,0.35)); color: var(--fg, #fff); border: none; border-radius: 999px; width: 36px; height: 36px; display: grid; place-items: center; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,0.15); backdrop-filter: blur(6px);">
             <i class="fa-solid fa-gear"></i>
         </button>
         <section id="about">
@@ -74,10 +75,11 @@
             <div id="presence">
                 <h1>discord <i class="fa-brands fa-discord"></i></h1>
                 <div class="dc-card">
-                    <div class="dc-avatar-wrap">
-                        <img id="dc-avatar" class="dc-avatar">
-                        <img id="dc-avatar-deco" class="dc-avatar-deco hidden">
+                    <div class="avatar-wrapper">
+                        <img id="dc-avatar" src="">
+                        <img id="dc-avatar-deco" class="hidden">
                     </div>
+
                     <div class="dc-ident">
                         <div id="dc-name" class="dc-name">
                             <div class="spinner"></div>
@@ -97,8 +99,14 @@
         </section>
         <section id="bsky">
             <h1>bluesky <i class="fa-brands fa-bluesky"></i></h1>
-            <div id="bsky-profile"><div class="spinner"></div></div>
-            <div id="bsky-post"><p class="loading"><div class="spinner"></div></p></div>
+            <div id="bsky-profile">
+                <div class="spinner"></div>
+            </div>
+            <div id="bsky-post">
+                <p class="loading">
+                <div class="spinner"></div>
+                </p>
+            </div>
         </section>
         <section id="projects">
             <h1>projects <i class="fa-solid fa-code"></i></h1>
@@ -111,7 +119,8 @@
                             class="fa-solid fa-tower-broadcast fa-beat" style="color: #8000ff;"></i> Audion</a></li>
                 <li>
                     <a href="/i/twemoji" title="Twitter's open source emoji set">
-                        <img src="https://twemoji.exerinity.dev/72x72/1f600.png" alt="twemoji" style="width: 1.25em; height: 1.25em; vertical-align: middle; margin-right: 0.25em;">
+                        <img src="https://twemoji.exerinity.dev/72x72/1f600.png" alt="twemoji"
+                            style="width: 1.25em; height: 1.25em; vertical-align: middle; margin-right: 0.25em;">
                         Twemoji
                     </a>
                 </li>
@@ -177,16 +186,15 @@
             <details>
                 <summary>release notes</summary>
                 <small>
-                    <i>disclaimer: these are not exhaustive, just the major changes. I may quietly update small things without logging them here.</i>
+                    <i>disclaimer: these are not exhaustive, just the major changes. I may quietly update small things
+                        without logging them here.</i>
                 </small>
                 <ul>
                     <li>Aug 26 2025, 8:55 pm - initial launch</li>
                     <li>Aug 26 2025, 9:44 pm - formatting bluesky images better</li>
                     <li>Aug 26 2025, 9:55 pm - added hls.js for bluesky video support</li>
-                    <li>Aug 27 2025, 2:00 am - made discord presence an entire card rather than just one line of text
-                    </li>
-                    <li>Aug 27 2025, 12:36 pm - added projects page and removed turbolinks (it breaks the stars
-                        animation)</li>
+                    <li>Aug 27 2025, 2:00 am - made discord presence an entire card rather than just one line of text</li>
+                    <li>Aug 27 2025, 12:36 pm - added projects page and removed turbolinks (it breaks the stars animation)</li>
                     <li>Aug 27 2025, 2:20 pm - added this release notes section, and cool loading spinners</li>
                     <li>Aug 28 2025, 5:04 pm - added <a href="/projects">a proper projects section</a></li>
                     <li>Aug 28 2025, 6:43 pm - added <a href="/i/twemoji">twemoji</a></li>
@@ -194,7 +202,8 @@
                     <li>Sep 9 2025, 9:40 pm - discord and bluesky now load from my api, consolidated, fixed no shooting stars</li>
                     <li>Sep 10 2025, 5:19 pm - added mastodon button</li>
                     <li>Sep 11 2025, 11:28 pm - added a settings popup w/ reduced motion</li>
-                    <li><strong>Sep 14, 2025, 7:45 pm - added more to <a href="/projects/audion">audion's page</a></strong></li>
+                    <li>Sep 14 2025, 7:45 pm - added more to <a href="/projects/audion">audion's page</a></li>
+                    <li class="current">Sep 27 2025, 12:42 pm - added dates to project pages</li>
                 </ul>
                 <span>timestamps are in UTC+10, or AEST</span>
             </details>

@@ -1,6 +1,6 @@
 (() => {
     console.log('ready to fetch data...');
-    const API = 'https://api.exerinity.com/getdata';
+    const API = 'https://bagel.exerinity.dev/getdata';
 
     const $ = (id) => document.getElementById(id);
     const esc = (s = '') => s
