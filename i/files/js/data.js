@@ -16,7 +16,6 @@
         activity: $('activity'),
         playing: $('playing'),
     avatar: $('dc-avatar'),
-    avatarDeco: $('dc-avatar-deco'),
         name: $('dc-name'),
     handle: $('dc-handle'),
     };
@@ -33,7 +32,6 @@
     const tuneAvatarOverlay = () => {
         try {
             const av = dizel.avatar;
-            const deco = dizel.avatarDeco;
             if (!av || !deco) return;
             const wrap = av.parentElement;
             if (!wrap) return;
@@ -44,10 +42,6 @@
             wrap.style.height = h + 'px';
             av.style.width = w + 'px';
             av.style.height = h + 'px';
-            deco.style.width = w + 'px';
-            deco.style.height = h + 'px';
-            deco.style.left = '0px';
-            deco.style.top = '0px';
         } catch { }
     };
 
@@ -149,24 +143,6 @@
         if (dizel.avatar) {
             if (dizel.avatar.complete) requestAnimationFrame(tuneAvatarOverlay);
             else dizel.avatar.addEventListener('load', () => requestAnimationFrame(tuneAvatarOverlay), { once: true });
-        }
-
-    const deco = u.avatar_decoration_data || data.avatar_decoration_data || null;
-        const decoAsset = deco?.asset || null;
-        if (dizel.avatarDeco) {
-            if (decoAsset) {
-        let reduced = false;
-        try { reduced = localStorage.getItem('reducedMotion') === 'true'; } catch {}
-        const passthrough = reduced ? 'false' : 'true';
-        const decoUrl = `https://cdn.discordapp.com/avatar-decoration-presets/${decoAsset}.png?size=4096&passthrough=${passthrough}`;
-                dizel.avatarDeco.src = decoUrl;
-                sh(dizel.avatarDeco, false);
-                if (dizel.avatarDeco.complete) requestAnimationFrame(tuneAvatarOverlay);
-                else dizel.avatarDeco.addEventListener('load', () => requestAnimationFrame(tuneAvatarOverlay), { once: true });
-            } else {
-                sh(dizel.avatarDeco, true);
-                dizel.avatarDeco.removeAttribute('src');
-            }
         }
 
         let lisl = '';

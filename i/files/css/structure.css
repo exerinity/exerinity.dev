@@ -391,18 +391,6 @@ ul {
     display: block;
 }
 
-#presence .dc-avatar-deco {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-    display: block;
-    image-rendering: crisp-edges;
-    image-rendering: pixelated;
-}
-
 #presence .dc-ident {
     display: flex;
     flex-direction: column;
@@ -442,29 +430,6 @@ ul {
 #presence .dc-right .fa-discord {
     color: #b6c2ff;
     font-size: 1.2rem;
-}
-
-.avatar-wrapper {
-  position: relative;
-  display: inline-block;
-  width: fit-content;
-  height: fit-content;
-}
-
-#dc-avatar {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 50%; 
-}
-
-#dc-avatar-deco {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%; 
-  height: 100%;
-  pointer-events: none;
 }
 
 
