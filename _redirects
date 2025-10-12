@@ -16,4 +16,4 @@
 /i/twemoji /twemoji
 /audion /projects/voxity
 /projects/audion /projects/voxity
-/projects/voxity/* /projects/voxity/:splat
+/projects/audion/* /projects/voxity/:splat
