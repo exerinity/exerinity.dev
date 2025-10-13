@@ -22,7 +22,8 @@
 
     <!-- og -->
     <meta property="og:title" content="exerinity">
-    <meta property="og:description" content="A semi-advanced music player that supports any audio file your browser does.">
+    <meta property="og:description"
+        content="A semi-advanced music player that supports any audio file your browser does.">
     <meta property="og:image" content="https://i.exerinity.com/VAIkJi5JHH">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://exerinity.dev/projects/voxity">
@@ -40,6 +41,7 @@
 <body>
     <script src="/i/files/js/stars.js" defer></script>
     <script src="/i/files/js/settings.js" defer></script>
+    <script src="/i/files/js/msg.js" defer></script>
     <canvas id="bgstars"></canvas>
     <main>
         <section id="about">
@@ -47,7 +49,9 @@
                 id="exedev">exerinity.dev / projects / voxity</small>
             <h1>voxity</h1>
             <small>status: FINISHED/ONGOING<br>started: July 2025</small>
-            <p><abbr title="Audio on">Audion</abbr> (<a href="https://bsky.app/profile/exerinity.dev/post/3m2yswjoaes2l">fka Audion</a>) is a <abbr title="Progressive Web App">PWA</abbr> local music file
+            <p><abbr title="Vox (from Latin), and ity (from the end of my username)">Voxity</abbr> (<a
+                    href="https://bsky.app/profile/exerinity.dev/post/3m2yswjoaes2l">fka Audion</a>) is a <abbr
+                    title="Progressive Web App">PWA</abbr> local music file
                 player. Its premise is simple: select your file... and... that's it. It has a few cool things, like
                 timed lyrics, visualizers, metadata, and a lot of clickable things. What you see is pretty simple, but
                 under the hood, it's quite advanced, considering I made it myself just for putting &lt;audio&gt; on
@@ -67,11 +71,13 @@
             </ul>
 
             <h2>why?</h2>
-            <p>I couldn't find a player like this (nor did I really look), and I wanted to consolidate my previous audio-related things into one project I can actually call an "app".</p>
+            <p>I couldn't find a player like this (nor did I really look), and I wanted to consolidate my previous
+                audio-related things into one project I can actually call an "app".</p>
             <div class="nav-links">
                 <a href="https://voxity.exerinity.com" target="_blank" rel="noopener">check it out!</a>
             </div>
             <div class="nav-links">
+                <a style="cursor: pointer;" onclick="msg(`<iframe src='https://i.exerinity.com/voxrelnote.html' style='width:100%; height:400px; border:none; border-radius:8px;'></iframe>`); return false;">release notes</a>
                 <a href="/projects/voxity/faq" target="_blank" rel="noopener">faq</a>
                 <a href="/projects/voxity/screenshots" target="_blank" rel="noopener">more screenshots</a>
             </div>
@@ -79,14 +85,24 @@
         <section id="about">
             <p>Now, I want to talk about some random things it has:</p>
             <ul style="list-style: disc; margin-left: 20px;">
-                <li><strong>metadata copying</strong>: you can click on the status bar, or the title/artist/album to copy the respective metadata to your clipboard</li>
+                <li><strong>metadata copying</strong>: you can click on the status bar, or the title/artist/album to
+                    copy the respective metadata to your clipboard</li>
                 <li><strong>draggable popups</strong>: because why not</li>
-                <li><strong>sound effects from Windows</strong>: the Vista/7 logon sound plays when you open the app, but you may never have heard it because browsers block autoplay; and also the 7 error sound when an error occurs</li>
+                <li><strong>sound effects from Windows</strong>: the Vista/7 logon sound plays when you open the app,
+                    but you may never have heard it because browsers block autoplay; and also the 7 error sound when an
+                    error occurs</li>
                 <li><strong>"toys"</strong>: lets you push fake errors, status pushes, message boxes</li>
-                <li><strong>an over-engineered status bar</strong>: instead of doing the good old <abbr title="pushUpdate() setTimeout(revert, 3000)">revert in 3 seconds</abbr>, the amount of status pushes are counted, and only 3 seconds after the last one will it revert. since the status bar shows scrubbing, volume, basically everything, this is necessary <a href="https://i.exerinity.com/2nFINbuQGM">or it will look very messy</a></li>
-                <li><strong>timed lyrics</strong>: if your file has matching metadata to what lrclib has, it will show timed lyrics, you can even click on a line to jump to it</li>
-                <li><strong>public domain</strong>: I released the code under the unlicense, because this is nonsense</li>
-                <li><strong>not obfuscated or minified</strong>: whatever I write, you get 1:1, but have fun navigating my vague naming conventions</li>
+                <li><strong>an over-engineered status bar</strong>: instead of doing the good old <abbr
+                        title="pushUpdate() setTimeout(revert, 3000)">revert in 3 seconds</abbr>, the amount of status
+                    pushes are counted, and only 3 seconds after the last one will it revert. since the status bar shows
+                    scrubbing, volume, basically everything, this is necessary <a
+                        href="https://i.exerinity.com/2nFINbuQGM">or it will look very messy</a></li>
+                <li><strong>timed lyrics</strong>: if your file has matching metadata to what lrclib has, it will show
+                    timed lyrics, you can even click on a line to jump to it</li>
+                <li><strong>public domain</strong>: I released the code under the unlicense, because this is nonsense
+                </li>
+                <li><strong>not obfuscated or minified</strong>: whatever I write, you get 1:1, but have fun navigating
+                    my vague naming conventions</li>
             </ul>
         </section>
         <hr>
