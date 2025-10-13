@@ -1,5 +1,5 @@
 /invite/ex3 https://discord.com/oauth2/authorize?client_id=757780137449226272 
-/invite/pigeon https://pigeon.exerinity.com/i/invite
+/invite/pigeon https://pigeon.exerinity.com/invite
 /twitter https://twitter.com/exerinity0
 /x https://x.com/exerinity0
 /github https://github.com/exerinity
@@ -13,7 +13,8 @@
 /pigeon /projects/pigeon
 /rs /projects/redsky
 /api https://api.exerinity.com
-/i/twemoji /twemoji
+/twemoji /twemoji
 /audion /projects/voxity
 /projects/audion /projects/voxity
 /projects/audion/* /projects/voxity/:splat
+/i/* /:splat
