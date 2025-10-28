@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="exerinity">
-    <title>projects / exerinity dot dev</title>
+    <title>spinnin' player / projects / exerinity dot dev</title>
     <link rel="stylesheet" href="/files/css/structure.css">
     <link rel="stylesheet" href="/files/css/misc.css">
     <link rel="stylesheet" href="/files/css/interactives.css">
-    <link rel="canonical" href="https://exerinity.dev">
+    <link rel="canonical" href="https://exerinity.dev/projects/spinnin' player">
     <meta name="theme-color" content="#4a29c2">
 
     <!-- font awesome -->
@@ -46,23 +46,31 @@
     <main>
         <section id="about">
             <small class="site-brand" style="font-size: 0.75rem; opacity: 0.8; user-select: none; cursor: pointer;"
-                id="exedev">exerinity.dev / projects</small>
-            <h1>projects</h1>
-            <div class="nav-links">
-                <a href="/projects/ex3">ex3</a> <a href="/projects/pigeon">pigeon</a> <a
-                    href="/projects/voxity">voxity</a> <a href="/projects/redsky">redsky</a> <a href="/projects/spinnin">spinnin' records player</a> <a href="/projects/misc">others</a>
-            </div>
+                id="exedev">exerinity.dev / projects / spinnin' player</small>
+            <h1>spinnin' player</h1>
+            <small>status: ACTIVE<br>started: October 2025</small>
+            <p><strong>spinnin' player</strong> is an app that aims to simulate the early/mid-2010s Spinnin' Records audio-only YouTube videos</p>
+            <img src="/files/media/spinnin.jpg" alt="spinnin' player screenshot" style="max-width: 100%; border-radius: 8px; margin-top: 10px;">
             <p>
-                I have archived the page over on exerinity.com because it was massive, uninformative, and a pain in the ass. <a href="https://exerinity.com/files/data/archived-projects">Here is the archive</a>.
+                (it moves around; this is just a still image)
             </p>
+            <div class="nav-links" style="margin-top: 10px;">
+                <a href="https://spinnin.exerinity.com" target="_blank" rel="noopener">visit it</a>
+                <a href="https://github.com/exerinity/spinnin" target="_blank" rel="noopener">source code</a>
+            </div>
         </section>
         <hr>
         <div class="nav-links">
-            <a href="https://exerinity.com"><i class="fa-solid fa-earth-americas"></i> exerinity.com</a>
             <a href="/"><i class="fa-solid fa-house"></i> home</a>
+            <a href="/projects"><i class="fa-solid fa-code"></i> back</a>
         </div>
     </main>
-    <script>document.getElementById('exedev').addEventListener('click', () => { window.location.href = '/'; });</script>
+
+    <script>
+        document.getElementById('exedev').addEventListener('click', () => {
+            window.location.href = '/projects';
+        });
+    </script>
 </body>
 
 </html>
