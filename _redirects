@@ -19,3 +19,4 @@
 /projects/audion/* /projects/voxity/:splat
 /i/* /:splat
 /lastfm https://www.last.fm/user/exerinity
+/projects/notepad /projects/why
