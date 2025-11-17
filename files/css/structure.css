@@ -1,7 +1,7 @@
 @import url("./scrollbar.css");
 @font-face {
     font-family: 'Inter';
-    src: url("/files/font/inter/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
+    src: url("/files/font/inter/reg.ttf") format("truetype");
     font-weight: 100 900;
     font-style: normal;
     font-display: swap;
@@ -9,15 +9,15 @@
 
 @font-face {
     font-family: 'Inter';
-    src: url("/files/font/inter/Inter-Italic-VariableFont_opsz\,wght.ttf") format("truetype");
+    src: url("/files/font/inter/italic.ttf") format("truetype");
     font-weight: 100 900;
     font-style: italic;
     font-display: swap;
 }
 
 body {
-    background-color: #150020;
-    color: #fff;
+    background-color: #000024;
+    color: #ffffff;
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
