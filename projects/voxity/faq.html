@@ -76,25 +76,35 @@
 
 <body>
     <script src="/files/js/stars.js" defer></script>
-    <script src="/files/js/settings.js" defer></script>
+    
     <canvas id="bgstars"></canvas>
     <main>
         <section id="about">
-            <small class="site-brand" style="font-size: 0.75rem; opacity: 0.8; user-select: none; cursor: pointer;"
-                id="exedev">exerinity.dev / projects / voxity / faq</small>
+            <small class="site-brand"><a href="/">exerinity.dev</a> / <a href="/projects">projects</a> / <a href="/projects/voxity">voxity</a> / faq</small>
             <h1 class="welcome">voxity: faq</h1>
             <h2>Where do lyrics come from?</h2>
             <p>
-                Lyrics are fetched from <a href="https://lrclib.net" target="_blank" rel="noopener">LRCLIB</a>, a free lyrics
-                database. If no lyrics are found there, none are shown. You can also manually enter lyrics by clicking the "Paste lyrics" button, or drag-and-drop a .lrc, .srt, or .vtt file to the dropzone.
+                Lyrics are fetched from <a href="https://lrclib.net" target="_blank" rel="noopener">LRCLIB</a>, a free
+                lyrics
+                database. If no lyrics are found there, none are shown. You can also manually enter lyrics by clicking
+                the "Paste lyrics" button, or drag-and-drop a .lrc, .srt, or .vtt file to the dropzone.
+            </p>
+            <h2>Can I add my own stuff / break / mutate / mutilate / download it locally?</h2>
+            <p>
+                Sure. Download it and go wild. Voxity is yours.
             </p>
             <h2>Can I donate?</h2>
             <p>
-                If you are considering donating to me, don't, <a href="https://github.com/tranxuanthang/lrclib?tab=readme-ov-file#donation" target="_blank" rel="noopener">instead donate to LRCLIB</a>. I can't imagine the amount of requests they handle daily, <a href="https://lrclib.net/docs" target="_blank">especially considering the extremely permissive API</a>.
+                If you are considering donating to me, don't, <a
+                    href="https://github.com/tranxuanthang/lrclib?tab=readme-ov-file#donation" target="_blank"
+                    rel="noopener">instead donate to LRCLIB</a>. I can't imagine the amount of requests they handle
+                daily, <a href="https://lrclib.net/docs" target="_blank">especially considering the extremely permissive
+                    API</a>.
             </p>
-            <h2>Can you download voxity?</h2>
+            <h2>Can you download Voxity?</h2>
             <p>
-                Yes - Voxity automatically "installs" itself as an offline PWA when you visit it. There is also an outdated
+                Yes - Voxity automatically "installs" itself as an offline PWA when you visit it. There is also an
+                outdated
                 experimental Electron version for Windows that you can download <a
                     href="https://i.exerinity.com/download-audion" target="_blank" rel="noopener">here</a>. It does
                 nothing special, it's literally just an executable wrapper around the web version, only much more bulky.
@@ -156,42 +166,26 @@
                     </tbody>
                 </table>
             </div>
-            <h2>Why isn't mobile supported?</h2>
-            <p>
-                Because I hate mobile and don't care who uses it. Also, the abundance of multiple screen sizes and iOS's
-                sandboxed "Files" app is just hell - not worth dealing with. Further, if you're on a phone, it probably
-                already has an app capable of playing music, and if not, use <a href="https://player.exerinity.com"
-                    target="_blank" rel="noopener">this tiny media player</a> I made instead.
-            </p>
             <h2>Is Voxity better than this or that?</h2>
             <p>
                 No. Defining "better" is subjective, and regardless of which subject you pick, it's still a no.
             </p>
             <h2>Are you here to compete with Spotify or TIDAL or VLC or foobar or some other music player?</h2>
             <p>
-                Nah. The provided examples per se are made for the masses or at least a better purpose, Voxity is not. But, feel free to compare.
+                No, comparing on-demand streaming services (Spotify, TIDAL) or full native media players (VLC, fb2k) to a web app made by
+                one person is quite stupid. But, knock yourself out.
             </p>
             <h2>Is it open source?</h2>
             <p>
-                Yes/No. There is no public repository, however I don't obfuscate or minify any code, so what I write,
-                you get. Simply, go to <a href="view-source:https://voxity.exerinity.com" target="_blank"
-                    rel="noopener">view-source:https://voxity.exerinity.com</a>.
-            </p>
-            <h2>Can I suggest a feature?</h2>
-            <p>
-                Maybe, <a href="https://exerinity.com/email" target="_blank" rel="noopener">email me</a>.
-            </p>
-            <h2>What is this error?</h2>
-            <p>
-                Voxity will usually only throw an error if the file is unsupported by your browser, or missing metadata.
-                If it's something else, <a href="https://exerinity.com/email" target="_blank" rel="noopener">email
-                    me</a>.
+                Yes. Inspect element.
             </p>
             <h2>
                 Can you jump to a specific time or playback speed or volume?
             </h2>
             <p>
-                Yes. Click on the label above the scrubber and a modal will open asking for the exact value.
+                Yes. Click on the label above the scrubber and a modal will open asking for the exact value. Also, press
+                your numerical keys to jump to the respective percentage in a song, for example, pressing 2 jumps to
+                20%. Holding Shift while doing this executes a half-jump, for example, pressing Shift+2 jumps to 15%.
             </p>
             <h2>
                 What metadata is required?
@@ -206,24 +200,14 @@
             That's it. I was kinda expecting that list to say more, but it's not rocket science.
             </p>
             <h2>
-                What formats don't work?
-            </h2>
-            <p>
-                I have tested (in Chrome 140) <abbr title="Musepack">MPC</abbr>, <abbr
-                    title="Audio Interchange File Format">AIFF</abbr> - these formats don't even play.<br>I have tested
-                <abbr title="Opus... is Opus. no abbreviations.">Opus</abbr>, <abbr
-                    title="Waveform Audio File Format">WAV</abbr>, <abbr
-                    title="Ogg container (typically with Vorbis or Opus audio)">OGG</abbr> - these do not load
-                metadata.<br><strong><abbr title="Free Lossless Audio Codec">FLAC</abbr>, and <abbr title="MPEG-1/2 Audio Layer III">MP3</abbr> or <abbr title="Advanced Audio Coding">AAC</abbr>
-                    work the best (at least in my testing) for both
-                    metadata and playback.</strong>
-            </p>
-            <h2>
                 What browser works best?
             </h2>
             <p>
-                Chrome. Any V8 derivative would probably work just as well, but there's less stuff in the way, at least from my testing. For example, <a href="https://i.exerinity.com/jbWM55QUHC.png">Opera's little file picker</a>, or Edge's... existence. Firefox works great too, but Chrome feels quicker with Voxity.<br><br>
-                In other words, OG Chrome works best because it has the best integration with PWAs and OS-level APIs, and no bloat/weird side-functions.
+                Chrome. Any modern browser with a good JS engine will run it fine, especially Firefox, but main OG
+                Chrome personally gives <i>me</i> the best experience. Chromium based browsers will probably also run it
+                just as good. However, Chrome feels best because of how straightforward it is and the way it handles
+                installed PWAs. For example, things like Opera's little preemptive file picker, Edge's existence, or
+                Vivaldi's weird status bar and whatnot feel odd. <strong><i>Whatever, use what you want!</i></strong>
             </p>
             <h2>
                 What can you click and what does it do?
@@ -234,49 +218,32 @@
                 <li>album cover: opens a larger version in a modal, and clicking the larger version opens the raw image
                     in a new tab</li>
                 <li>title, artist, album: copies the respective metadata to your clipboard</li>
-                <li>status bar: copies "Title by Artist" to your clipboard</li>
-                <li>scrubber labels: opens a modal to enter a specific value (speed, time, volume)</li>
-                <li>that circle button: restarts the track</li>
-                <li>the "toys" button: opens a modal allowing you to push fake errors, status messages, and message
-                    boxes</li>
-                <li>the "lyrics" button: opens a modal where you can enter your own LRC lyrics</li>
-                <li>the "theme" button: self explanatory</li>
-                <li>a line in the lyrics modal: jumps to that line</li>
+                <li>status bar text: copies "Title by Artist" to your clipboard</li>
+                <li>slider labels: opens a modal to enter a specific value (speed, time, volume)</li>
+                <li>the reverse button: restarts the track</li>
+                <li>a line in the lyrics zone: jumps to that line</li>
                 <li>the visualizer canvas: a modal to change the mode</li>
+                <li>"Voxity" in the top left or right corner (conditional on playback): opens an about modal</li>
             </ul>
             You can also scroll over sliders to, well, slide. and also, pressing numeric keys jumps to the percentage of
             the song played through (e.g. pressing 4 jumps to 40% done).
             </p>
             <h2>
-                Why does it use so much memory?
+                How much RAM is it? Is it lighter than this or that? And if not, WHY?
             </h2>
             <p>
-                I didn't fine-tune Voxity to use minimal memory. I made it for <i>me</i>, and my system has lots of RAM. But, unless you have an entire fucking decade of music queued, you shouldn't use <i>that</i> much.
-            </p>
-            <h2>
-                Is Voxity free to use?
-            </h2>
-            <p>
-                Yes, both monetarily and permissively. Voxity doesn't cost money to use and also in the public domain.
+                I didn't fine-tune Voxity to use minimal memory. However, I also didn't fuck it sideways with
+                unnecessary frameworks or whatnot. Depending on how much you have queued, its actual memory usage is
+                quite low. Typically under 150 MB.<br>
+                <img src="https://vienna.exerinity.dev/kK7ynKoCLf.png" style="max-width:100%;height:auto;"><br>
+                Here, you can see I have the entire "Welcome to the Future" album by Mord Fustang queued, in FLAC, and
+                its only using 92 MB.
             </p>
             <h2>
                 Does Voxity sound better than normally playing audio in a browser?
             </h2>
             <p>
-                No. Voxity isn't designed for audiophile use, it's for casual listening.
-            </p>
-            <h2>
-                So, it doesn't work on mobile, play better, or have every feature... what <i>is</i> this for?
-            </h2>
-            <p>
-                My own usage. I have a planet of locally stored music, and made Voxity for myself... I'm just publicly sharing it.
-            </p>
-            <h2>
-                Why did you make this?
-            </h2>
-            <p>
-                Because the &lt;audio&gt; element is fun to work with, and I have an absurd amount of music on my computer. About 100 GB, or 9000 songs.<br><br>
-                I am 100% positive there are other players like it, but I couldn't find one (nor did I really look), so...
+                No - Voxity literally uses the normal &lt;audio&gt; element to play, so it's identical.
             </p>
         </section>
         <section id="about">
@@ -286,11 +253,6 @@
                 <a href="/projects"><i class="fa-solid fa-code"></i> projects</a>
         </section>
     </main>
-    <script>
-        document.getElementById('exedev').addEventListener('click', () => {
-            window.location.href = '/projects/voxity';
-        });
-    </script>
 </body>
 
 </html>

@@ -39,12 +39,11 @@
 
 <body>
     <script src="/files/js/stars.js" defer></script>
-    <script src="/files/js/settings.js" defer></script>
+    
     <canvas id="bgstars"></canvas>
     <main>
         <section id="about">
-            <small class="site-brand" style="font-size: 0.75rem; opacity: 0.8; user-select: none; cursor: pointer;"
-                id="exedev">exerinity.dev / projects / misc</small>
+            <small class="site-brand"><a href="/">exerinity.dev</a> / <a href="/projects">projects</a> / misc</small>
             <h1>other projects</h1>
             <p>
                 Other projects I made that don't deserve their own page or I don't care about
@@ -112,6 +111,9 @@
             </p>
             <img src="https://vienna.exerinity.dev/sparkmusic.png" style="max-width:100%;height:auto;">
         </section>
+        <section id="about">
+            This is not an exhaustive list. I have truly made a lot of shit and forgot about it.
+        </section>
 
 
             <div class="nav-links">
@@ -121,11 +123,7 @@
             </div>
     </main>
 
-    <script>
-        document.getElementById('exedev').addEventListener('click', () => {
-            window.location.href = '/projects';
-        });
-    </script>
+    
 </body>
 
 </html>

@@ -1,4 +1,5 @@
 @import url("./scrollbar.css");
+
 @font-face {
     font-family: 'Inter';
     src: url("/files/font/inter/reg.ttf") format("truetype");
@@ -91,7 +92,7 @@ p {
     line-height: 1.6;
 }
 
-#projects ul {
+.projects ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 12px;
@@ -99,12 +100,12 @@ p {
     margin: 12px 0 0;
 }
 
-#projects li {
+.projects li {
     margin: 0;
     font-size: 1rem;
 }
 
-#projects a {
+.projects a {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -118,7 +119,7 @@ p {
     text-decoration: none;
 }
 
-#projects li i {
+.projects li i {
     color: #b6c2ff;
     font-size: 1.1rem;
     flex: 0 0 auto;
@@ -199,14 +200,14 @@ ul {
 }
 
 @media (max-width: 480px) {
-    #clocks .clock-item {
+    .clocks .clock-item {
         padding: 10px 12px;
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
     }
 
-    #clocks .clock-item span {
+    .clocks .clock-item span {
         margin-left: 0;
         align-self: stretch;
         text-align: center;
@@ -218,15 +219,19 @@ ul {
     gap: 2rem;
     margin: 2em 0;
     flex-wrap: wrap;
+    user-select: none;
+    --webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .nav-links a,
-#song-shuffle {
+.song-shuffle {
     font-size: 1.5em;
     font-weight: 700;
     padding: 0.5em 1em;
     border-radius: 8px;
-    background: #000833;
+    background: #1a1f3b;
     color: #fff;
     text-decoration: none;
     transition: background 0.2s ease, transform 0.08s ease;
@@ -236,13 +241,13 @@ ul {
     cursor: pointer;
 }
 
-#song-shuffle {
+.song-shuffle {
     font-size: 1rem;
     padding: 0.4em 0.9em;
     gap: 8px;
 }
 
-#presence .dc-card {
+.presence .dc-card {
     display: grid;
     grid-template-columns: 56px 1fr auto;
     align-items: center;
@@ -255,7 +260,7 @@ ul {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-#presence .dc-avatar-wrap {
+.presence .dc-avatar-wrap {
     position: relative;
     width: 56px;
     height: 56px;
@@ -267,42 +272,42 @@ ul {
     transform: translateZ(0);
 }
 
-#presence .dc-avatar {
+.presence .dc-avatar {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
 
-#presence .dc-ident {
+.presence .dc-ident {
     display: flex;
     flex-direction: column;
     min-width: 0;
 }
 
-#presence .dc-name {
+.presence .dc-name {
     font-weight: 700;
     font-size: 1.05rem;
     line-height: 1.2;
 }
 
-#presence .dc-handle {
+.presence .dc-handle {
     color: #b6c2ff;
     font-size: 0.95rem;
 }
 
-#presence .dc-sub .sub {
+.presence .dc-sub .sub {
     display: block;
 }
 
-#presence .dc-right {
+.presence .dc-right {
     display: flex;
     align-items: center;
     gap: 8px;
     margin-left: 8px;
 }
 
-#presence .dc-status {
+.presence .dc-status {
     padding: 4px 8px;
     border-radius: 9999px;
     font-size: 0.85rem;
@@ -310,27 +315,41 @@ ul {
     background: rgba(255, 255, 255, 0.08);
 }
 
-#presence .dc-right .fa-discord {
+.presence .dc-right .fa-discord {
     color: #b6c2ff;
     font-size: 1.2rem;
 }
 
 
 @media (max-width: 480px) {
-    #presence .dc-card {
+    .presence .dc-card {
         grid-template-columns: 48px 1fr auto;
         gap: 10px;
         padding: 10px 12px;
     }
 
-    #presence .dc-avatar-wrap { width: 48px; height: 48px; }
+    .presence .dc-avatar-wrap {
+        width: 48px;
+        height: 48px;
+    }
 }
 
-a, a:visited {
+a,
+a:visited {
     color: #fff;
 }
 
 .current {
     color: #ff5a5a;
     font-weight: bold;
+}
+
+.site-brand {
+    font-size: 0.75rem;
+    opacity: 0.8;
+    user-select: none;
+}
+
+.site-brand a {
+    text-decoration: none;
 }

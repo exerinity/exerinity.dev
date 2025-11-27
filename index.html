@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -39,38 +40,34 @@
     <!-- cross verification -->
     <link rel="me" href="https://mas.to/@sparkfire298" />
     <link rel="me" href="https://en.pronouns.page/@exerinity" />
-    <link rel="me" href="https://twitter.com/exerinity0" /> <link rel="me" href="https://x.com/exerinity_" /> <!-- no fucking idea whats what under the hood of twatter so heres both urls -->
+    <link rel="me" href="https://twitter.com/exerinity0" />
+    <link rel="me" href="https://x.com/exerinity_" />
+    <!-- no fucking idea whats what under the hood of twatter so heres both urls -->
     <link rel="me" href="https://social.luckvintage.com/@e" />
     <link rel="me" href="https://c.im/@exe" />
 </head>
 
 <body>
-    <noscript>
-        Please enable JavaScript to view this website properly!
-    </noscript>
     <script src="/files/js/stars.js" defer></script>
     <script src="/files/js/clock.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script src="/files/js/data.js" defer></script>
     <script src="/files/js/songs.js" defer></script>
     <script src="/files/js/main.js" defer></script>
     <script src="/files/js/msg.js" defer></script>
-    <script src="/files/js/settings.js" defer></script>
+
     <canvas id="bgstars"></canvas>
     <main>
-        <button id="settings-btn" title="Settings" aria-label="Settings"
-            style="position: fixed; top: 10px; right: 10px; z-index: 10000; background: var(--btn-bg, rgba(0,0,0,0.35)); color: var(--fg, #fff); border: none; border-radius: 999px; width: 36px; height: 36px; display: grid; place-items: center; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,0.15); backdrop-filter: blur(6px);">
-            <i class="fa-solid fa-gear"></i>
-        </button>
-        <section id="about">
-            <small class="site-brand" style="font-size: 0.75rem; opacity: 0.8; user-select: none; cursor: pointer;"
-                id="exedev" title="click me!">exerinity.dev
+        <section class="about">
+            <small class="site-brand" title="click me 3 times..." id="exedev" style="cursor: pointer">exerinity.dev
             </small>
             <h1 id="welcome" class="welcome" title="Welcomeeeeeeeeeeee">
                 welcome to exerinity.dev 👋
             </h1>
-            <p>Hey! I'm <strong>exerinity</strong> <i>(“ecksa-rinity”)</i>, a <a href="https://en.pronouns.page/@exerinity" target="_blank"><i class="fa-solid fa-mars"
-                    style="color: #216598; cursor: pointer; text-decoration: underline;" title="male"></i></a> self-taught programmer. I mostly code front end PWAs, but also sometimes Discord bots and other serverside stuff, so basically a full stack developer. I hate that cheesy-ass title. Anyway, I code in 
+            <p>Hey! I'm <strong>exerinity</strong> <i>(“ecksa-rinity”)</i>, a <a
+                    href="https://en.pronouns.page/@exerinity" target="_blank"><i class="fa-solid fa-mars"
+                        style="color: #216598; cursor: pointer; text-decoration: underline;" title="male (click for more info)"></i></a>
+                self-taught programmer. I mostly code front end PWAs, but also sometimes Discord bots and other
+                serverside stuff, so basically a full stack developer. I hate that cheesy-ass title. Anyway, I code in
                 JavaScript only. Unconventionally.</p>
             <p>I play too many games—BeamNG.drive mostly. My favourite car in it is the Bruckell Bastion 5.7 Luxe AWD. I
                 also sometimes play Counter-Strike 2 and GTA V.
@@ -80,13 +77,17 @@
                 Daft Punk, Avicii, Simon Viklund, deadmau5, Ummet Ozcan... <a target="_blank"
                     href="https://www.last.fm/user/exerinity/library/artists?from=1970-01-01&to=2025-10-13">just check
                     here, I guess?</a></p>
-            <p>I have made a very wide range of things, mostly web-based tools or Discord bots. <a href="/projects">You can see my projects
+            <p>I have made a very wide range of things, mostly web-based tools or Discord bots. <a href="/projects">You
+                    can see my projects
                     here</a> or below. You can <a href="https://exerinity.com/github" target="_blank">check out my
-                    GitHub</a>, but you'll be disappointed; as not much of my work is there. Most of my work are static websites, where the entire source is available upon pressing CTRL+U, and the rest, <u style="cursor: pointer" onclick="msg('I rarely comment my code, use vague short names...')">is not worth your time.</u></p>
+                    GitHub</a>, but you'll be disappointed; as not much of my work is there. Most of my work are static
+                websites, where the entire source is available upon pressing CTRL+U, and the rest, <u
+                    style="cursor: pointer" onclick="msg('I rarely comment my code, use vague short names...')">is not
+                    worth your time.</u></p>
             </p>
             <p>Oh, and my MBTI personality type is INFP-T, and I'm somewhere between 15 and 20 years old.</p>
             <hr>
-            <div id="presence">
+            <div class="presence">
                 <h1>discord <i class="fa-brands fa-discord" style="color: #5865f2"></i></h1>
                 <div class="dc-card">
                     <div class="dc-avatar-wrap">
@@ -118,7 +119,7 @@
                 </div>
             </div>
         </section>
-        <section id="projects">
+        <section class="projects">
             <h1>projects <i class="fa-solid fa-code" style="color: #4a29c2"></i></h1>
             <ul>
                 <li title="A multifunctional bot"><a href="/projects/ex3"><i class="fa-solid fa-brands fa-discord"></i>
@@ -131,7 +132,7 @@
 
             </ul>
         </section>
-        <section id="social">
+        <section class="social">
             <h1>follow me <i class="fa-solid fa-share-nodes" style="color: #4a29c2"></i></h1>
             <div class="nav-links">
                 <a href="/twitter" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"
@@ -150,7 +151,7 @@
         </section>
         <section id="clocks">
             <h1>time for... <i class="fa-solid fa-clock"></i></h1>
-            <div class="clocks">
+            <div id="clocks">
                 <div class="clock-item" title="UTC, GMT 0">
                     <i class="fa-solid fa-globe"></i> UTC
                     <span id="clock-utc" aria-live="polite">
@@ -171,12 +172,12 @@
                 </div>
             </div>
         </section>
-        <section id="random-song">
+        <section class="random-song">
             <audio id="anotherone" preload="auto" src="https://vienna.exerinity.dev/another_one.ogg"></audio>
             <h1><a class="secrethyperlink" href="https://open.spotify.com/playlist/0ddWhrmtzPgUUMSoQvDLd0">random song
                     <i class="fa-brands fa-spotify" style="color: #1ed760"></i></a></h1>
             <div class="song-controls" style="margin: .5rem 0 1rem;">
-                <button id="song-shuffle" type="button">
+                <button class="song-shuffle" id="song-shuffle" type="button">
                     <i class="fa-solid fa-shuffle"></i> another one
                 </button>
             </div>
@@ -184,7 +185,7 @@
                 <div class="spinner"></div>
             </div>
         </section>
-        <section id="about">
+        <section class="about">
             <p>this site is in early development! also check out <a href="https://exerinity.com">exerinity.com</a></p>
             <details>
                 <summary>release notes</summary>
@@ -192,34 +193,20 @@
                     <i>disclaimer: these are not exhaustive, just the major changes. I may quietly update small things
                         without logging them here.</i>
                 </small>
+                <br><i>for older notes before Oct 30, <a href="/oldrelnotes">view this</a></i>
                 <ul>
-                    <li>Aug 26 2025, 8:55 pm - initial launch</li>
-                    <li>Aug 26 2025, 9:44 pm - formatting bluesky images better</li>
-                    <li>Aug 26 2025, 9:55 pm - added hls.js for bluesky video support</li>
-                    <li>Aug 27 2025, 2:00 am - made discord presence an entire card rather than just one line of text
-                    </li>
-                    <li>Aug 27 2025, 12:36 pm - added projects page and removed turbolinks (it breaks the stars
-                        animation)</li>
-                    <li>Aug 27 2025, 2:20 pm - added this release notes section, and cool loading spinners</li>
-                    <li>Aug 28 2025, 5:04 pm - added <a href="/projects">a proper projects section</a></li>
-                    <li>Aug 28 2025, 6:43 pm - added <a href="/twemoji">twemoji</a></li>
-                    <li>Sep 2 2025, 4:45 pm - added a status to projects (ongoing, finished, early)</li>
-                    <li>Sep 9 2025, 9:40 pm - discord and bluesky now load from my api, consolidated, fixed no shooting
-                        stars</li>
-                    <li>Sep 10 2025, 5:19 pm - added mastodon button</li>
-                    <li>Sep 11 2025, 11:28 pm - added a settings popup w/ reduced motion</li>
-                    <li>Sep 14 2025, 7:45 pm - added more to <a href="/projects/audion">audion's page</a></li>
-                    <li>Sep 27 2025, 12:42 pm - added dates to project pages</li>
-                    <li>Oct 6 2025, 2:18 pm - added a <a href="/projects/misc">"misc"</a> projects page
-                        and longer intro, some more colour too</li>
-                    <li>Oct 13 2025, 1:47 pm - updated <a href="/projects/voxity">Audion to Voxity</a>
-                        after renaming it</li>
-                    <li>Oct 28 2025, 6:46 pm - added <a href="/projects/spinnin">spinnin' player</a> to projects, updated twitter</li>
-                    <li>Oct 30 2025, 7:40 pm - the site is now purple, and all media links have been outsourced for my cloudflare r2 bucket (vienna.exerinity.dev) for redundancy
-                        (instead of them being duplicated every time i push a new commit both on github and cloudflare pages, they're now firmly in one place only)</li>
-                    <li>Nov 3 2025, 7:24 pm - pages have been given a fresh description for metadata, added <a href="/projects/why">why</a> to projects, and the purple has been made a bit darker</li>
+                    <li>Oct 30 2025, 7:40 pm - the site is now purple, and all media links have been outsourced for my
+                        cloudflare r2 bucket (vienna.exerinity.dev) for redundancy
+                        (instead of them being duplicated every time i push a new commit both on github and cloudflare
+                        pages, they're now firmly in one place only)</li>
+                    <li>Nov 3 2025, 7:24 pm - pages have been given a fresh description for metadata, added <a
+                            href="/projects/why">why</a> to projects, and the purple has been made a bit darker</li>
                     <li>Nov 6 2025, 10:42 am - removed the bluesky button and latest post field</li>
-                    <li class="current">Nov 17 2025, 5:44 pm - changed intro, the site is now dark blue, goes better with the stars; like a proper night sky</li>
+                    <li>Nov 17 2025, 5:44 pm - changed intro, the site is now dark blue, goes better with the stars;
+                        like a proper night sky</li>
+                    <li class="current">Nov 27 2025, 7:06 pm - updated pretty much every page to use proper hyperlinks
+                        for the "exerinity.dev / whatever" title instead of a click listener in js, <a
+                            href="/projects/voxity/faq">updated voxity's faq</a></li>
                 </ul>
                 <span>timestamps are in UTC+11.</span>
             </details>

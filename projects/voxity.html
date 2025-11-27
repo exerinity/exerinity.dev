@@ -40,19 +40,20 @@
 
 <body>
     <script src="/files/js/stars.js" defer></script>
-    <script src="/files/js/settings.js" defer></script>
+    
     <script src="/files/js/msg.js" defer></script>
     <canvas id="bgstars"></canvas>
     <main>
         <section id="about">
-            <small class="site-brand" style="font-size: 0.75rem; opacity: 0.8; user-select: none; cursor: pointer;"
-                id="exedev">exerinity.dev / projects / voxity</small>
+            <small class="site-brand"><a href="/">exerinity.dev</a> / <a href="/projects">projects</a> / voxity</small>
             <h1>voxity</h1>
             <small>status: FINISHED/ONGOING<br>inception: July 2025</small>
-            <p><abbr title="Vox (from Latin), and ity (from the end of my username)">Voxity</abbr> (formerly Audion) is a <abbr
-                    title="Progressive Web App">PWA</abbr> local music file
+            <p><abbr title="Vox (from Latin), and ity (from the end of my username, exerin*ity*)">Voxity</abbr> (<a
+                    href="https://bsky.app/profile/exerinity.dev/post/3m2yswjoaes2l" target="_blank">formerly
+                    Audion</a>) is a <abbr title="Progressive Web App">PWA</abbr> local music file
                 player. Its premise is simple: select your file... and... that's it. It has a few cool things, like
-                timed lyrics, visualizers, metadata handling, themes, and a lot of clickable things. What you see is pretty simple, but
+                timed lyrics, visualizers, metadata handling, themes, and a lot of clickable things. What you see is
+                pretty simple, but
                 under the hood, it's quite advanced, considering I made it myself just for putting &lt;audio&gt; on
                 steroids.</p>
             <img src="https://vienna.exerinity.dev/voxity.png" style="max-width:100%;height:auto;">
@@ -60,22 +61,33 @@
         <section id="about">
             <h2>features</h2>
             <ul style="list-style: disc; margin-left: 20px;">
-                <li>Lightweight by design: no frameworks, no build tools, no bloat</li>
-                <li>Pure HTML, CSS, and JavaScript</li>
-                <li>Local file playback: nothing uploaded, nothing tracked, everything stays yours</li>
-                <li>Supports any format your browser can decode: from MP3s to FLACs</li>
-                <li>Metadata parsing: reads tags, artwork, and album info</li>
-                <li>Timed lyrics support via online lookup or manual insertion, plus, click on a line to jump to it</li>
+                <li>Lightweight, kinda</li>
+                <li>Local file playback only</li>
+                <li>Supports any format your browser does (however, not every format has metadata support)</li>
+                <li>Metadata parsing courtesy of jsmediatags</li>
+                <li>Timed lyrics either by automatic lookup via LRCLIB or drag-and-drop your own files</li>
+                <li>SubRip and WebVTT parsing for lyrics</li>
                 <li>Real-time visualizers</li>
                 <li>Queue system with shuffle</li>
-                <li>Lots of keyboard hotkeys</li>
-                <li>Fine-tuned controls: sliders and numeric dialogs for 100% precision</li>
-                <li>Offline-ready PWA: installable, with smart caching and instant startup</li>
-                <li>Integrates with the Media Session API: supports hardware and OS-level media keys</li>
-                <li>Dynamic tab titles that scroll track info elegantly without clutter</li>
-                <li>Varied themes</li>
-                <li>Simple on the surface, absurdly precise underneath</li>
+                <li>LOTS of keyboard hotkeys</li>
+                <li>Progress bars can be scrolled over with your mouse to... scroll</li>
+                <li>Can be installed as an app and work offline</li>
+                <li>Media Session API integration, so metadata shows at an OS level</li>
+                <li>Dynamic tab titles that scroll track info</li>
+                <li>A handful of themes</li>
+                <li>Almost everything can be clicked</li>
+                <li>An extremely hackable nature; press CTRL+S and go wild</li>
                 <li style="list-style: none;">and more!</li>
+            </ul>
+            <h2>what it doesnt have</h2>
+            <ul style="list-style: disc; margin-left: 20px;">
+                <li>The ability to scan your drive for music -- you must bring it the music</li>
+                <li>Live radio / stream support</li>
+                <li>Advanced audio manipulation such as an equalizer</li>
+                <li>Optimization. However, the code is heavily browser-reliant, so any modern system should run it fine
+                    as-is</li>
+                <li>Analytics or a server-side component excluding third-party LRCLIB. However, Cloudflare may sometimes
+                    inject a "bot fight" script. I have no idea how to disable it.</li>
             </ul>
 
 
@@ -87,7 +99,7 @@
                 <a href="https://voxity.exerinity.com" target="_blank" rel="noopener">check it out!</a>
             </div>
             <div class="nav-links">
-                <a style="cursor: pointer;" onclick="voxrel()">release
+                <a style="cursor: pointer;" onclick="msg(`<iframe src='https://i.exerinity.com/voxrelnote.html' style='width:100%; height:400px; border:none; border-radius:8px;'></iframe>`); return false;">release
                     notes</a>
                 <a href="/projects/voxity/faq" target="_blank" rel="noopener">faq</a>
                 <a href="/projects/voxity/screenshots" target="_blank" rel="noopener">more screenshots</a>
@@ -99,16 +111,6 @@
             <a href="/projects"><i class="fa-solid fa-code"></i> back</a>
         </div>
     </main>
-
-    <script>
-        document.getElementById('exedev').addEventListener('click', () => {
-            window.location.href = '/projects';
-        });
-
-        function voxrel() {
-            msg(`<iframe src='https://i.exerinity.com/voxrelnote.html' style='width:100%; height:400px; border:none; border-radius:8px;'></iframe>`); return false;
-        }
-    </script>
 </body>
 
 </html>

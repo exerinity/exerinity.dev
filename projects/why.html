@@ -40,12 +40,11 @@
 
 <body>
     <script src="/files/js/stars.js" defer></script>
-    <script src="/files/js/settings.js" defer></script>
+    
     <canvas id="bgstars"></canvas>
     <main>
         <section id="about">
-            <small class="site-brand" style="font-size: 0.75rem; opacity: 0.8; user-select: none; cursor: pointer;"
-                id="exedev">exerinity.dev / projects / why.txt</small>
+            <small class="site-brand"><a href="/">exerinity.dev</a> / <a href="/projects">projects</a> / why.txt</small>
             <h1>why.txt</h1>
             <small>status: ONGOING<br>inception: November 2025</small>
             <p><strong>why.txt</strong> is a simple PWA notepad with formatting support, autosave, offline persistence,
@@ -84,11 +83,7 @@
         </div>
     </main>
 
-    <script>
-        document.getElementById('exedev').addEventListener('click', () => {
-            window.location.href = '/projects';
-        });
-    </script>
+    
 </body>
 
 </html>
