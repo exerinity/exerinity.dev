@@ -16,14 +16,6 @@
 The code here is pretty bad... good luck understanding it lol
 */
 
-// cuz im lazy:
-(() => {
-  const script = document.createElement('script');
-  script.src = '/files/js/settings.js';
-  script.defer = true;
-  document.head.appendChild(script);
-})();
-
 function twittermoji() {
     twemoji.parse(document, {
         base: 'https://twemoji.exerinity.dev/',
@@ -86,5 +78,3 @@ document.getElementById("exedev").addEventListener("click", () => {
         }, 500);
     }
 });
-
-// settings-related code moved to settings.js
