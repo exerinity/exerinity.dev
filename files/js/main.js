@@ -29,29 +29,31 @@ twittermoji();
 function welcome() {
 
     let welcomes = [
-    { text: "welcome to exerinity.dev", lang: "English" },
-    { text: "willkommen auf exerinity.dev", lang: "German" },
-    { text: "bienvenue sur exerinity.dev", lang: "French" },
-    { text: "ciao! benvenuto su exerinity.dev", lang: "Italian" },
-    { text: "欢迎来到 exerinity.dev", lang: "Chinese (Simplified)" },
-    { text: "ようこそ、exerinity.dev へ", lang: "Japanese" },
-    { text: "exerinity.dev 에 오신 것을 환영합니다", lang: "Korean" },
-    { text: "bienvenido a exerinity.dev", lang: "Spanish" },
-    { text: "välkommen till exerinity.dev", lang: "Swedish" },
-    { text: "g'day! welcome to exerinity.dev", lang: "Aussie" }, // im australian but never say 'gday' haha
-    { text: "bem-vindo ao exerinity.dev", lang: "Portuguese" },
-    { text: "добро пожаловать на exerinity.dev", lang: "Russian" },
-    { text: "selamat datang di exerinity.dev", lang: "Indonesian" },
-    { text: "welkom bij exerinity.dev", lang: "Afrikaans" },
-    { text: "καλώς ήρθατε στο exerinity.dev", lang: "Greek" }
-];
-
+        { text: "welcome to exerinity.dev", lang: "English" },
+        { text: "willkommen auf exerinity.dev", lang: "German" },
+        { text: "bienvenue sur exerinity.dev", lang: "French" },
+        { text: "ciao! benvenuto su exerinity.dev", lang: "Italian" },
+        { text: "欢迎来到 exerinity.dev", lang: "Chinese (Simplified)" },
+        { text: "ようこそ、exerinity.dev へ", lang: "Japanese" },
+        { text: "exerinity.dev 에 오신 것을 환영합니다", lang: "Korean" },
+        { text: "bienvenido a exerinity.dev", lang: "Spanish" },
+        { text: "välkommen till exerinity.dev", lang: "Swedish" },
+        { text: "g'day! welcome to exerinity.dev", lang: "Aussie" }, // im australian but never say 'gday' haha
+        { text: "bem-vindo ao exerinity.dev", lang: "Portuguese" },
+        { text: "добро пожаловать на exerinity.dev", lang: "Russian" },
+        { text: "selamat datang di exerinity.dev", lang: "Indonesian" },
+        { text: "welkom bij exerinity.dev", lang: "Afrikaans" },
+        { text: "καλώς ήρθατε στο exerinity.dev", lang: "Greek" },
+        { text: "haii!!! :33 haiii ^_^ hewwo!!1!1! >////<", lang: null },
+        { text: ".... . .-.. .-.. ---", lang: "Morse code"},
+        { text: "console.log('Hello World!');", lang: "JavaScript"}
+    ];
 
     let chosen = welcomes[Math.floor(Math.random() * welcomes.length)];
     let el = document.getElementById("welcome");
 
     el.innerText = chosen.text.toLocaleLowerCase() + " 👋";
-    el.title = `this is welcome in ${chosen.lang}!`;
+    if (el.lang) el.title = `this is welcome in ${chosen.lang}`;
     twittermoji();
 }
 
@@ -80,6 +82,6 @@ document.getElementById("exedev").addEventListener("click", () => {
 });
 
 if (location.search.includes("com")) {
-  document.getElementById("exedev").innerHTML =
-    `exerinity.dev <a href="https://exerinity.com">(back to exerinity.com)</a>`;
+    document.getElementById("exedev").innerHTML =
+        `exerinity.dev <a href="https://exerinity.com">(back to exerinity.com)</a>`;
 }
