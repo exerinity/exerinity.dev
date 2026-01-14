@@ -57,6 +57,16 @@ hr {
     -ms-user-select: none;
 }
 
+.femboy {
+    cursor: pointer;
+}
+
+.femboy img {
+    height: 1.2em;
+    width: auto;
+    vertical-align: -0.1em;
+}
+
 @keyframes shake {
     0% {
         transform: translate(1px, 1px) rotate(0deg);

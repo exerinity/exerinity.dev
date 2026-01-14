@@ -17,7 +17,7 @@
 }
 
 body {
-    background-color: #000000;
+    background-color: #150029;
     color: #ffffff;
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -126,6 +126,9 @@ p {
 }
 
 @media (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
     main {
         width: 92%;
         margin-left: 4%;
@@ -142,6 +145,9 @@ p {
 }
 
 @media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
     main {
         width: 96%;
         margin-left: 2%;
@@ -149,8 +155,27 @@ p {
         padding: 18px 20px;
     }
 
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.05em;
+    }
+
     #projects a {
         padding: 10px 12px;
+    }
+}
+
+@media (max-width: 360px) {
+    html {
+        font-size: 13px;
+    }
+
+    .nav-links a,
+    .song-shuffle {
+        font-size: 1.2em;
     }
 }
 
@@ -354,7 +379,7 @@ a:visited {
 }
 
 .current {
-    color: #ff5a5a;
+    color: #f1ff31;
     font-weight: bold;
 }
 

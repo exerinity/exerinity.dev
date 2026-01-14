@@ -40,13 +40,11 @@
             const rect = wrap.getBoundingClientRect();
             const w = Math.round(rect.width);
             const h = Math.round(rect.height);
+            if (!w || !h) {
+                requestAnimationFrame(tuneAvatarOverlay);
+                return;
+            }
             const scale = 1.05;
-            wrap.style.width = w + 'px';
-            wrap.style.height = h + 'px';
-            av.style.width = w + 'px';
-            av.style.height = h + 'px';
-            deco.style.width = w + 'px';
-            deco.style.height = h + 'px';
             deco.style.left = '50%';
             deco.style.top = '50%';
             deco.style.setProperty('--deco-scale', scale);
