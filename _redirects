@@ -20,7 +20,6 @@
 /projects/why /projects/scholia
 /projects/why/* /projects/scholia/:splat
 /why /projects/scholia
-/i/* /:splat
 /lastfm https://www.last.fm/user/exerinity
 /projects/notepad /projects/scholia
 /twemoji /i/twemoji
