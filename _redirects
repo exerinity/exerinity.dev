@@ -4,9 +4,11 @@
 /x https://x.com/exerinity_
 /github https://github.com/exerinity
 /discord https://discord.com/users/972907501127344179
-/socials https://exerinity.com/socials
+/socials /i/sites
+/sites /i/sites
 /dotcom https://exerinity.com
-/stars /stargaze
+/stars /i/stargaze
+/stargaze /i/stargaze
 /blog/* https://exerinity.com/blog/:splat
 /ex3 /projects/ex3
 /pigeon /projects/pigeon
@@ -21,7 +23,7 @@
 /i/* /:splat
 /lastfm https://www.last.fm/user/exerinity
 /projects/notepad /projects/scholia
-/i/twemoji /twemoji
+/twemoji /i/twemoji
 /to/ex3 https://ex3.icu
 /to/pigeon https://pigeon.exerinity.com
 /to/voxity https://voxity.dev
@@ -41,3 +43,9 @@
 /go/roblox https://www.roblox.com/users/4849967783/profile
 /go/instagram https://instagram.com/ex3.lol
 /go/discord https://discord.com/users/972907501127344179
+/go/twitch https://www.twitch.tv/whmnst
+/go/discord https://discord.com/users/972907501127344179
+/oldrelnotes /i/release_notes
+/README.md https://github.com/exerinity/exerinity.dev/blob/main/README.md
+/LICENSE https://github.com/exerinity/exerinity.dev/blob/main/LICENSE
+/_redirects https://github.com/exerinity/exerinity.dev/blob/main/_redirects
