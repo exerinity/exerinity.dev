@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9, viewport-fit=cover">
+    <meta name="author" content="exerinity">
+    <title>escope / projects / exerinity dot dev</title>
+    <link rel="stylesheet" href="/files/css/structure.css">
+    <link rel="stylesheet" href="/files/css/misc.css">
+    <link rel="stylesheet" href="/files/css/interactives.css">
+    <link rel="canonical" href="https://exerinity.dev/projects/notepad">
+    <meta name="theme-color" content="#4a29c2">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- twemoji -->
+    <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+
+    <!-- og -->
+    <meta property="og:title" content="exerinity">
+    <meta property="og:description" content="Cloudflare Worker for creating ephemeral self-destructing redirects ('scopes')">
+    <meta property="og:image" content="https://vienna.exerinity.dev/av.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://exerinity.dev">
+    <meta property="og:site_name" content="exerinity.dev">
+
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://vienna.exerinity.dev" crossorigin>
+    <link rel="preconnect" href="https://api.lanyard.rest" crossorigin>
+
+    <!-- icons -->
+    <link rel="icon" type="image/png" href="https://vienna.exerinity.dev/av.png">
+    <link rel="apple-touch-icon" href="https://vienna.exerinity.dev/av.png">
+</head>
+
+<body>
+    <script src="/files/js/stars.js" defer></script>
+    
+    <canvas id="bgstars"></canvas>
+    <main>
+        <section id="about">
+            <small class="site-brand"><a href="/">exerinity.dev</a> / <a href="/projects">projects</a> / escope</small>
+            <h1>escope</h1>
+            <small>status: ONGOING/NEW<br>inception: February 2026</small>
+            <p><strong>escope</strong> (<strong><u>E</u></strong>phemeral <strong><u>S</u></strong>coped <strong><u>C</u></strong>ontrol <strong><u>o</u></strong>f <strong><u>P</u></strong>ersistent <strong><u>E</u></strong>ndpoints) is a Cloudflare Worker for creating ephemeral self-destructing redirects ("scopes").</p>
+            <img src="https://vienna.exerinity.dev/qkkjvj2en_1772093145.png" style="max-width:100%;height:auto;">
+            <h2>features</h2>
+            <ul style="list-style: disc; margin-left: 20px;">
+                <li>Scopes can last from one minute to 3 days</li>
+                <li>Scopes can be retracted prematurely if you own them</li>
+                <li>Fast (its a cloudflare worker)</li>
+                <li>A strict and sophisticated rate limiting system</li>
+                <li>No sign up required</li>
+                <li>Private</li>
+            </ul>
+            <div class="nav-links" style="margin-top: 10px;">
+                <a href="https://escp.lol" target="_blank" rel="noopener">visit escope</a>
+            </div>
+            <h2>why?</h2>
+            <p>A return to Cloudflare Workers after <a href="redsky">Redsky</a> felt necessary.</p>
+        </section>
+        <hr>
+        <div class="nav-links">
+            <a href="/"><i class="fa-solid fa-house"></i> home</a>
+            <a href="/projects"><i class="fa-solid fa-code"></i> back</a>
+        </div>
+    </main>
+
+    
+</body>
+
+</html>
