@@ -84,7 +84,37 @@
                 2010s. My favourite artists are Martin Garrix,
                 Daft Punk, Avicii, Simon Viklund, deadmau5, Ummet Ozcan... <a target="_blank"
                     href="https://www.last.fm/user/exerinity/library/artists?from=1970-01-01&to=2025-10-13">just check
-                    here, I guess?</a> My favourite song is "Animals" by Martin Garrix. Super rare, I know.</p>
+                    here, I guess?</a></p>
+            <details>
+                <summary>My favourite songs</summary>
+                <ol>
+                    <li>"Animals" by Martin Garrix</li>
+                    <li>"I Will Give You My All 2017" by Simon Viklund</li>
+                    <li>"Colorblind" by Panda Eyes</li>
+                    <li>"Gravity" by Martin Garrix & Sem Vox ft. Jaimes</li>
+                    <li>"SuperWave" by Ummet Ozcan</li>
+                    <li>"Seek Bromance" by Tim Berg (Avicii Vocal Mix)</li>
+                    <li>"Call Me A Spaceman" by Hardwell (Dr. Phunk Remix)</li>
+                    <li>"A City In Florida" by deadmau5</li>
+                    <li>"Iron" by Calvin Harris & Nicky Romero</li>
+                    <li>"C.U.B.A" by Calvin Harris</li>
+                    <li>"Can't Feel My Face" by The Weeknd (Martin Garrix Remix)</li>
+                    <li>"Sorbet" by Mord Fustang</li>
+                    <li>"Rinzler" by Daft Punk (Kaskade Remix)</li>
+                    <li>"I Remember" by deadmau5 & Kaskade</li>
+                    <li>"Thousand" by Moby</li>
+                    <li>"Hollywood Nights" by Bob Seger</li>
+                    <li>"Espresso" by Sabrina Carpenter</li>
+                    <li>"War Pigs" by Black Sabbath</li>
+                    <li>"Feuer frei!" by Rammstein</li>
+                    <li>"sugar honey ice & tea" by Bring Me the Horizon</li>
+                    <li>"Crazy" by Tiësto & Dzeko (Tiësto's Big Room Mix)</li>
+                    <li>"Take Me Out" by Franz Ferdinand (Daft Punk Remix)</li>
+                    <li>"Ethereal Connection" by Tame Impala</li>
+                    <li>"Birth of the New Model" by Perturbator</li>
+                    <li>"Danger Zone" by Kenny Loggins</li>
+                </ol>
+            </details>
             <p>I have made a very wide range of things, mostly PWAs or Discord bots. <a href="/projects">You
                     can see my projects
                     here</a> or below. You can <a href="/go/github" target="_blank">check out my
@@ -200,7 +230,13 @@
         </section>
         <section class="random-song">
             <audio id="anotherone" preload="auto" src="https://meow.exerinity.gay/another_one.ogg"></audio>
-            <h1>random song <i class="fa-brands fa-tidal" style="color: #fff" title="TIDAL"></i> </h1>
+            <h1>
+                random song
+                <span id="platform-toggle" class="platform-toggle" title="Spotify" aria-label="Toggle music platform" role="button" tabindex="0">
+                    <i class="fa-brands fa-spotify platform-icon" data-icon="spotify"></i>
+                    <i class="fa-brands fa-tidal platform-icon" data-icon="tidal"></i>
+                </span>
+            </h1>
             <div class="song-controls" style="margin: .5rem 0 1rem;">
                 <button class="song-shuffle" id="song-shuffle" type="button">
                     <i class="fa-solid fa-shuffle"></i> another one
@@ -217,29 +253,8 @@
                     <i>disclaimer: these are not exhaustive, just the major changes. I may quietly update small things
                         without logging them here.</i>
                 </small>
-                <br><i>for older notes before Oct 30, <a href="/i/release_notes">view this</a></i>
+                <br><i>for older notes before Jan 9, <a href="/i/release_notes">view this</a></i>
                 <ul>
-                    <li>Oct 30 2025, 7:40 pm - the site is now purple, and all media links have been outsourced for my
-                        cloudflare r2 bucket (i.exerinity.com) for redundancy
-                        (instead of them being duplicated every time i push a new commit both on github and cloudflare
-                        pages, they're now firmly in one place only)</li>
-                    <li>Nov 3 2025, 7:24 pm - pages have been given a fresh description for metadata, added <a
-                            href="/projects/why">why</a> to projects, and the purple has been made a bit darker</li>
-                    <li>Nov 6 2025, 10:42 am - removed the bluesky button and latest post field</li>
-                    <li>Nov 17 2025, 5:44 pm - changed intro, the site is now dark blue, goes better with the stars;
-                        like a proper night sky</li>
-                    <li>Nov 27 2025, 7:06 pm - updated pretty much every page to use proper hyperlinks
-                        for the "exerinity.dev / whatever" title instead of a click listener in js, <a
-                            href="/projects/voxity/faq">updated voxity's faq</a></li>
-                    <li>Nov 29 2025, 11:25 am - added a video to <a href="/projects/voxity">voxity's</a>
-                        page + changed cdn url from "i.exerinity.com" to "vienna.exerinity.dev"</li>
-                    <li>Dec 5 2025, 6:43 pm - added more information to <a href="/projects">projects landing page</a>
-                    </li>
-                    <li>Dec 13 2025, 6:50 pm - added <a href="/sites">/sites</a> from exerinity.com + new welcome
-                        messages</li>
-                    <li>Dec 23 2025, 4:58 pm - renaming <a href="/projects/scholia">why.txt to
-                            scholia</a></li>
-                    <li>Dec 24 2025, 6:32 pm - the spotify embed has been replaced with tidal</li>
                     <li>Jan 9 2026, 9:13 pm - added <a href="/projects/misc">MyPayIndia</a> to list of
                         projects</li>
                     <li>Jan 14 2026, 7:06 pm - some minor adjustments to the discord card rendering and
@@ -250,7 +265,7 @@
                     <li>Feb 6 2026, 11:19 pm - back to #000000 background</li>
                     <li>Feb 22 2026, 5:48 pm - updated a lot of pages and site intro</li>
                     <li>Feb 26 2026, 6:58 pm - new project: <a href="/projects/escope">escope</a></li>
-                    <li class="current">Feb 28 2026, 6:39 pm - domain change initiated</li>
+                    <li class="current">Feb 28 2026, 6:39 pm - domain change initiated, the stars are now purple, shooting stars can be R/G/B/W, toggle random song source by clicking its icon</li>
                 </ul>
                 <span><a href="#time">timestamps = my time above</a></span>
             </details>
