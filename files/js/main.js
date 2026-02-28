@@ -1,24 +1,10 @@
 /*
-                                                                 ___                            ___                      
-                                          .-.              .-.  (   )                          (   )                     
-  .--.    ___  ___    .--.    ___ .-.    ( __)  ___ .-.   ( __)  | |_      ___  ___          .-.| |    .--.    ___  ___  
- /    \  (   )(   )  /    \  (   )   \   (''") (   )   \  (''") (   __)   (   )(   )        /   \ |   /    \  (   )(   ) 
-|  .-. ;  | |  | |  |  .-. ;  | ' .-. ;   | |   |  .-. .   | |   | |       | |  | |        |  .-. |  |  .-. ;  | |  | |  
-|  | | |   \ `' /   |  | | |  |  / (___)  | |   | |  | |   | |   | | ___   | |  | |        | |  | |  |  | | |  | |  | |  
-|  |/  |   / ,. \   |  |/  |  | |         | |   | |  | |   | |   | |(   )  | '  | |        | |  | |  |  |/  |  | |  | |  
-|  ' _.'  ' .  ; .  |  ' _.'  | |         | |   | |  | |   | |   | | | |   '  `-' |        | |  | |  |  ' _.'  | |  | |  
-|  .'.-.  | |  | |  |  .'.-.  | |         | |   | |  | |   | |   | ' | |    `.__. |   .-.  | '  | |  |  .'.-.  ' '  ; '  
-'  `-' /  | |  | |  '  `-' /  | |         | |   | |  | |   | |   ' `-' ;    ___ | |  (   ) ' `-'  /  '  `-' /   \ `' /   
- `.__.'  (___)(___)  `.__.'  (___)       (___) (___)(___) (___)   `.__.    (   )' |   `-'   `.__,'    `.__.'     '_.'    
-                                                                            ; `-' '                                      
-                                                                             .__.'                                       
-
 The code here is pretty bad... good luck understanding it lol
 */
 
 function twittermoji() {
     twemoji.parse(document, {
-        base: 'https://twemoji.exerinity.dev/',
+        base: 'https://twemoji.exerinity.com/',
         size: '72x72',
         ext: '.png'
     });
@@ -29,13 +15,13 @@ twittermoji();
 function welcome() {
 
     let welcomes = [
-        { text: "welcome to exerinity.dev", lang: "English" },
-        { text: "willkommen auf exerinity.dev", lang: "German" },
-        { text: "ciao! benvenuto su exerinity.dev", lang: "Italian" },
-        { text: "ようこそ、exerinity.dev へ", lang: "Japanese" },
-        { text: "bienvenido a exerinity.dev", lang: "Spanish" },
-        { text: "välkommen till exerinity.dev", lang: "Swedish" },
-        { text: "g'day! welcome to exerinity.dev", lang: "Aussie" },
+        { text: "welcome to exerinity.gay", lang: "English" },
+        { text: "willkommen auf exerinity.gay", lang: "German" },
+        { text: "ciao! benvenuto su exerinity.gay", lang: "Italian" },
+        { text: "ようこそ、exerinity.gay へ", lang: "Japanese" },
+        { text: "bienvenido a exerinity.gay", lang: "Spanish" },
+        { text: "välkommen till exerinity.gay", lang: "Swedish" },
+        { text: "g'day! welcome to exerinity.gay", lang: "Aussie" },
         { text: "haii!!! :33 haiii ^_^ hewwo!!1!1! >////<", lang: "terminally online" },
         { text: "console.log('Hello World!');", lang: "JavaScript"}
     ];
@@ -44,7 +30,8 @@ function welcome() {
     let el = document.getElementById("welcome");
 
     el.innerText = chosen.text.toLocaleLowerCase() + " 👋";
-    twittermoji(); // because twemoji is the best emoji library EVAR
+    twittermoji(); 
+    el.title = chosen.lang;// because twemoji is the best emoji library EVAR
 }
 
 welcome();
@@ -53,7 +40,7 @@ document.getElementById("welcome").addEventListener("click", welcome);
 let clickz = 0;
 let timer;
 
-document.getElementById("exedev").addEventListener("click", () => {
+document.getElementById("exe").addEventListener("click", () => {
     clickz++;
     clearTimeout(timer);
     timer = setTimeout(() => {
@@ -72,6 +59,6 @@ document.getElementById("exedev").addEventListener("click", () => {
 });
 
 if (location.search.includes("com")) {
-    document.getElementById("exedev").innerHTML =
-        `exerinity.dev <a href="https://exerinity.com">(back to exerinity.com)</a>`;
+    document.getElementById("exe").innerHTML =
+        `exerinity.gay <a href="https://exerinity.com">(back to exerinity.com)</a>`;
 }
