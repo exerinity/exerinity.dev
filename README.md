@@ -1,4 +1,4 @@
-# [exerinity.dev](https://exerinity.dev/?from=github)
+# [exerinity.gay](https://exerinity.gay/?from=github)
 my personal site
 
 there is no proper readme cuz i dont give a shit, do what you want with this
