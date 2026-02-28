@@ -17,7 +17,7 @@
 }
 
 body {
-    background-color: #000000;
+    background-color: #0a0014;
     color: #ffffff;
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -25,6 +25,18 @@ body {
     overflow-x: hidden;
     text-align: center;
     cursor: default;
+}
+
+body {
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
 }
 
 #bgstars {
@@ -133,7 +145,7 @@ p {
         width: 92%;
         margin-left: 4%;
         margin-right: 4%;
-        padding: 22px 24px;
+        padding: 20px 22px;
     }
 
     main,
@@ -152,7 +164,8 @@ p {
         width: 96%;
         margin-left: 2%;
         margin-right: 2%;
-        padding: 18px 20px;
+        padding: 16px 18px;
+        margin-top: 72px;
     }
 
     h1 {
@@ -163,7 +176,8 @@ p {
         font-size: 1.05em;
     }
 
-    #projects a {
+    #projects a,
+    .projects a {
         padding: 10px 12px;
     }
 }
@@ -173,9 +187,8 @@ p {
         font-size: 13px;
     }
 
-    .nav-links a,
     .song-shuffle {
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 }
 
@@ -252,7 +265,7 @@ ul {
 
 .nav-links a,
 .song-shuffle {
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: 700;
     padding: 0.5em 1em;
     border-radius: 8px;
@@ -270,6 +283,17 @@ ul {
     font-size: 1rem;
     padding: 0.4em 0.9em;
     gap: 8px;
+}
+
+@media (max-width: 640px) {
+    .nav-links {
+        gap: 0.75rem;
+    }
+    .nav-links a,
+    .song-shuffle {
+        font-size: 1.2em;
+        padding: 0.45em 0.9em;
+    }
 }
 
 .presence .dc-card {
